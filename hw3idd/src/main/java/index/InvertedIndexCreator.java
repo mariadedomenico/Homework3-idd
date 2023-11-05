@@ -15,11 +15,14 @@ public class InvertedIndexCreator {
 
 		try {
 			
-			for(List<String> columns : cells2column.values()) {
-				for(String c : columns) {
+			// iteriamo sulle colonne
+			for(Integer column : cells2column.keySet()) {
+				// iteriamo sulle celle
+				for(String c : cells2column.get(column)) {
 					Document document = new Document();
 					document.add(new TextField("id", tableId, Field.Store.YES));
 					document.add(new TextField("cells", c, Field.Store.YES));
+					document.add(new TextField("column", column.toString(), Field.Store.YES));
 					writer.addDocument(document);
 				}
 			}
