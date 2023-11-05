@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,13 +15,8 @@ import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.codecs.Codec;
 import org.apache.lucene.codecs.simpletext.SimpleTextCodec;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
-import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.json.simple.parser.ParseException;
@@ -30,14 +24,13 @@ import org.json.simple.parser.ParseException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import Query.QueryRunner;
 import table.Cella;
 
 public class InvertedIndex {
 
 	public static void main(String args[]) throws Exception {
 		
-		Path indexPath = Paths.get("/Users/elisacatena/Desktop");   //path per memorizzare l'indice
+		Path indexPath = Paths.get("/Users/elisacatena/Desktop/index");   //path per memorizzare l'indice
 		Directory directory = null;
 		Scanner scanner = new Scanner(System.in);
 		
@@ -89,30 +82,6 @@ public class InvertedIndex {
 	                    e.printStackTrace();
 	                }
 	            }
-	            
-	            IndexReader reader = DirectoryReader.open(directory);
-	            IndexSearcher searcher = new IndexSearcher(reader);
-	            
-	            while (true) {
-	                System.out.print("Inserisci una query oppure 'exit' per uscire: ");
-	                String queryReader = scanner.nextLine();
-	                if(queryReader.equals("exit")) break;
-	                
-	                String[] input = queryReader.split(",");
-	          
-	                QueryParser queryParser = new QueryParser("cells", new StandardAnalyzer());
-	                Query query;
-	                Map<String, List<Cella>> term2cell = new HashMap<>();
-	                for(int i = 0; i < input.length; i++) {
-	                	query = queryParser.parse(input[i]);
-	                	term2cell.put(input[i], new ArrayList<>());
-	                	QueryRunner.runQuery(searcher, query, term2cell, input[i]);
-	                }
-	                
-	            }
-	            
-	            
-	            PostingListReader.readPostingList(indexPath);
 
 	        } catch (IOException e) {
 	            e.printStackTrace();
@@ -125,11 +94,27 @@ public class InvertedIndex {
 	        }
 			writer.commit();
 			writer.close();
+            
+            Map<Cella, Integer> set2count = new HashMap<>();
+            
+            while (true) {
+                System.out.print("Inserisci una query oppure 'exit' per uscire: ");
+                String queryReader = scanner.nextLine();
+                if(queryReader.equals("exit")) break;
+                String[] input = queryReader.split(",");
+                for(int i = 0; i < input.length; i++) {
+                	PostingListReader.readPostingList(indexPath, input[i], set2count);
+                }
+                
+            }
+            scanner.close();
+                    
+            for(Cella k : set2count.keySet()) {
+            	System.out.println("colonna " + k.getColonna() + ", tableID " + k.getTableId() + "-> " + set2count.get(k));
+            }
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-        
-
 	}
 }
