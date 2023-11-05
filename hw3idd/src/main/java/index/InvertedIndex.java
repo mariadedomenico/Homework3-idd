@@ -106,7 +106,7 @@ public class InvertedIndex {
 	                for(int i = 0; i < input.length; i++) {
 	                	query = queryParser.parse(input[i]);
 	                	term2cell.put(input[i], new ArrayList<>());
-	                	QueryRunner.runQuery(searcher, query, term2cell);
+	                	QueryRunner.runQuery(searcher, query, term2cell, input[i]);
 	                }
 	                
 	            }

@@ -2,19 +2,19 @@ package table;
 
 public class Cella {
 
-	private int colonna;
+	private String colonna;
 	private String tableId;
 	
-	public Cella(int colonna, String tableId) {
+	public Cella(String colonna, String tableId) {
 		this.colonna = colonna;
 		this.tableId = tableId;
 	}
 	
-	public int getColonna() {
+	public String getColonna() {
 		return colonna;
 	}
 	
-	public void setColonna(int colonna) {
+	public void setColonna(String colonna) {
 		this.colonna = colonna;
 	}
 	
