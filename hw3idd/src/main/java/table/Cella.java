@@ -1,5 +1,7 @@
 package table;
 
+import java.util.Objects;
+
 public class Cella {
 
 	private String colonna;
@@ -25,5 +27,20 @@ public class Cella {
 	public void setTableId(String tableId) {
 		this.tableId = tableId;
 	}
+
+	@Override
+	public int hashCode() {
+		return this.colonna.hashCode() + this.tableId.hashCode() + 31;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null)
+			return false;
+		Cella other = (Cella) obj;
+		return this.colonna.equals(other.getColonna()) && this.tableId.equals(other.getTableId());
+	}
+	
+	
 
 }
