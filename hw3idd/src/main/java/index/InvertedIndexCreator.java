@@ -34,8 +34,11 @@ public class InvertedIndexCreator {
 
 		for(int i = 0; i < cells.size(); i++) {
 			column = cells.get(i).get("Coordinates").get("column").asInt();
+			if(cells.get(i).get("cleanedText").isNull()) {
+				continue;
+			}
+			
 			cellContent = cells.get(i).get("cleanedText").asText();
-
 			if(cells2column.containsKey(column)) {
 				cells2column.get(column).add(cellContent);
 			}
@@ -47,7 +50,7 @@ public class InvertedIndexCreator {
 		}
 	}
 
-	public void createIndex(String tablePath, Path indexPath) throws Exception {
+	public void createIndex(String tablePath, Path indexPath, Statistica stat) throws Exception {
 
 		Directory directory = null;
 
@@ -57,6 +60,7 @@ public class InvertedIndexCreator {
 
 		perFieldAnalyzers.put("id", new StandardAnalyzer());
 		perFieldAnalyzers.put("cells", new StandardAnalyzer());
+		perFieldAnalyzers.put("column", new StandardAnalyzer());
 
 		Analyzer analyzer = new PerFieldAnalyzerWrapper(defaultAnalyzer, perFieldAnalyzers);
 		IndexWriterConfig config = new IndexWriterConfig(analyzer);
@@ -69,7 +73,7 @@ public class InvertedIndexCreator {
 			IndexWriter writer = new IndexWriter(directory, config);
 			writer.deleteAll(); 
 
-			this.readTables(tablePath, indexPath, writer);
+			this.readTables(tablePath, indexPath, writer, stat);
 			writer.commit();
 			writer.close();
 		}
@@ -79,11 +83,11 @@ public class InvertedIndexCreator {
 
 	}
 
-	public void readTables(String tablePath, Path indexPath, IndexWriter writer) throws Exception {
+	public void readTables(String tablePath, Path indexPath, IndexWriter writer, Statistica stat) throws Exception {
 		
 		Map<Integer, List<String>> cells2column = new HashMap<>();
 		BufferedReader br = null;
-
+		
 		try {
 			String currentLine;
 
@@ -96,15 +100,15 @@ public class InvertedIndexCreator {
 
 				try {
 					JsonNode rootNode = objectMapper.readTree(currentLine);
-
+					
+					
 					// Estrai l'oggetto "cells"
 					JsonNode cellsNode = rootNode.get("cells");
 					String tableId = rootNode.get("_id").asText();
-
 					//dobbiamo creare una mappa con id della tabella, contenuto della cella e coordinate della cella
 					this.updateCells2column(cellsNode, cells2column);
 					this.addDocumentToIndex(cells2column, tableId, writer);
-
+					
 					cells2column.clear();
 
 				} catch (Exception e) {
