@@ -1,7 +1,5 @@
 package table;
 
-import java.util.Objects;
-
 public class Cella {
 
 	private String colonna;
