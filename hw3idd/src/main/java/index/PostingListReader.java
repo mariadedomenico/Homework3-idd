@@ -19,7 +19,7 @@ import table.Cella;
 public class PostingListReader {
 	
     @SuppressWarnings("deprecation")
-	public static void readPostingList(Path indexPath, String termToCheck, Map<Cella, Integer> set2count) throws IOException {
+	public void readPostingList(Path indexPath, String termToCheck, Map<Cella, Integer> set2count) throws IOException {
     	
         // Apre l'indice
         Directory directory = FSDirectory.open(indexPath);
@@ -35,13 +35,10 @@ public class PostingListReader {
         if (terms != null) {
             TermsEnum termsEnum = terms.iterator();
             BytesRef term = new BytesRef(termToCheck);
-            System.out.println("Term: " + term.toString());
-            System.out.println("termsEnum.seekExact(term): " + termsEnum.seekExact(term));
             if (termsEnum.seekExact(term)) {
             	termsEnum = terms.iterator();
 	            while ((term = termsEnum.next()) != null) {
 	            	String termValue = term.utf8ToString();
-	            	System.out.println("termValue: " + termValue);
 	                if (termValue.equals(termToCheck)) {
 		                PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.POSITIONS);
 		                int docID;
@@ -56,7 +53,6 @@ public class PostingListReader {
 	                    	else {
 	                    		set2count.put(cella, 1);
 	                    	}
-	                        System.out.println("Term: " + termValue + ", DocID: " + docID);
 	                    }
 	                }
 	            }
