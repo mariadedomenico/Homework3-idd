@@ -19,12 +19,13 @@ public class MainClass {
 		Path indexPath = Paths.get("/Users/elisacatena/Desktop/index");   //path per memorizzare l'indice
 		String tablePath = System.getProperty("user.dir") + "/src/main/resources/tables/tables.json";
 		Scanner scanner = new Scanner(System.in);
+		Statistica stat = new Statistica();
 		
 		try {
 			
 			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
 			
-			indexCreator.createIndex(tablePath, indexPath);
+			indexCreator.createIndex(tablePath, indexPath, stat);
 
 
 			Map<Cella, Integer> set2count = new HashMap<>();
@@ -42,10 +43,24 @@ public class MainClass {
 			}
 
 			scanner.close();
-
-			Statistica stat = new Statistica();
-			stat.findTopK(set2count);
-
+			stat.createStats(tablePath);
+			System.out.println("\nNumero tabelle: " + stat.getNTables().intValue());
+			System.out.println("\nNumero medio righe: " + stat.getNRows());
+			System.out.println("\nNumero medio colonne: " + stat.getNColumns());
+			System.out.println("\nNumero medio valori nulli per tabella: " + stat.getNumNullValues());
+			System.out.println("\nDistribuzione numero di righe : ");
+			for(Integer i : stat.getRow2count().keySet()) {
+				System.out.println(i + "->" + stat.getRow2count().get(i));
+			}
+			System.out.println("\nDistribuzione numero di colonne : ");
+			for(Integer i : stat.getCol2count().keySet()) {
+				System.out.println(i + "->" + stat.getCol2count().get(i));
+			}
+			System.out.println("\nDistribuzione valori distinti : ");
+			for(Integer i : stat.getDistinct2col().keySet()) {
+				System.out.println(i + "->" + stat.getDistinct2col().get(i));
+			}
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
