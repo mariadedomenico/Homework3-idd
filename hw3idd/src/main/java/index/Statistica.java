@@ -3,6 +3,7 @@ package index;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.lucene.benchmark.quality.Judge;
+import org.apache.lucene.benchmark.quality.QualityStats;
 import org.apache.lucene.benchmark.quality.trec.TrecJudge;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -70,7 +72,7 @@ public class Statistica {
 	public void setNumNullValues(Double nNullValues) {
 		this.numNullValues = nNullValues;
 	}
-	
+
 	public Map<Integer, Integer> getRow2count() {
 		return row2count;
 	}
@@ -97,9 +99,9 @@ public class Statistica {
 		else {
 			this.col2count.put(size, 1);
 		}
-		
+
 	}
-	
+
 	public Map<Integer, Integer> getDistinct2col() {
 		return distinct2col;
 	}
@@ -200,19 +202,19 @@ public class Statistica {
 		Set<Double> numCol = new HashSet<>();
 		Map<Double, Set<String>> colDistinctValues = new HashMap<>();
 		Map<Double, Set<String>> rowDistinctValues = new HashMap<>();
-		
+
 		for(int i = 0; i < cellsNode.size(); i++) {
 			Double col = cellsNode.get(i).get("Coordinates").get("column").asDouble();
 			Double row = cellsNode.get(i).get("Coordinates").get("row").asDouble();
 			String cleanedText = cellsNode.get(i).get("cleanedText").asText();
-			
+
 			numRows.add(row);
 			numCol.add(col);
-			
+
 			if(cleanedText.equals("Null")) {
 				this.setNumNullValues(this.getNumNullValues()+1);
 			}
-			
+
 			if(colDistinctValues.containsKey(col)) {
 				colDistinctValues.get(col).add(cleanedText);
 			}
@@ -221,7 +223,7 @@ public class Statistica {
 				distinctWords.add(cleanedText);
 				colDistinctValues.put(col, distinctWords);
 			}
-			
+
 			if(rowDistinctValues.containsKey(row)) {
 				rowDistinctValues.get(row).add(cleanedText);
 			}
@@ -231,7 +233,7 @@ public class Statistica {
 				rowDistinctValues.put(row, distinctWords);
 			}
 		}
-		
+
 		this.setNRows(this.getNRows() + numRows.size());
 		this.setRow2count(numRows.size());
 		this.setNColumns(this.getNColumns() + numCol.size());
@@ -239,10 +241,19 @@ public class Statistica {
 		this.setDistinct2col(colDistinctValues);
 		this.setDistinct2row(rowDistinctValues);
 	}
-	
-	public void generateMetrics(BufferedReader br) {
-		Judge judge = new TrecJudge(br); 
-	}
-	
+
+//	public void generateMetrics(BufferedReader br) throws IOException {
+//                
+//		PrintWriter logger = new PrintWriter(System.out, true);         
+//		
+//		Judge judge = new TrecJudge(br);                       
+//		
+// 
+//		QualityStats stats[] = qrun.execute(judge,null);        
+//		QualityStats avg = QualityStats.average(stats);           
+//  
+//   
+//	}
+
 
 }
