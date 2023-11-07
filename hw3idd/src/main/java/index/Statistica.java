@@ -13,6 +13,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.apache.lucene.benchmark.quality.Judge;
+import org.apache.lucene.benchmark.quality.trec.TrecJudge;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -24,16 +27,16 @@ public class Statistica {
 	private Double nRows = 0.0;
 	private Double nColumns = 0.0;
 	private Double numNullValues = 0.0;
-	private Map<Integer, Integer> row2count;
 	private Map<Integer, Integer> col2count;
+	private Map<Integer, Integer> row2count;
 	private Map<Integer, Integer> distinct2col;
 	private Map<Integer, Integer> distinct2row;
 
 	public Statistica() {
-		this.row2count = new HashMap<>();
 		this.col2count = new HashMap<>();
-		this.distinct2row = new HashMap<>();
+		this.row2count = new HashMap<>();
 		this.distinct2col = new HashMap<>();
+		this.distinct2row = new HashMap<>();
 	}
 
 	public Double getNTables() {
@@ -117,8 +120,16 @@ public class Statistica {
 		return distinct2row;
 	}
 
-	public void setDistinct2row(Map<Integer, Integer> distinct2row) {
-		this.distinct2row = distinct2row;
+	public void setDistinct2row(Map<Double, Set<String>> map) {
+		for(Set<String> set : map.values()) {
+			if(this.distinct2row.containsKey(set.size())) {
+				Integer value = this.distinct2row.get(set.size());
+				this.distinct2row.put(set.size(), value+1);
+			}
+			else {
+				this.distinct2row.put(set.size(), 1);
+			}
+		}
 	}
 
 	public <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
@@ -188,15 +199,20 @@ public class Statistica {
 		Set<Double> numRows = new HashSet<>();
 		Set<Double> numCol = new HashSet<>();
 		Map<Double, Set<String>> colDistinctValues = new HashMap<>();
+		Map<Double, Set<String>> rowDistinctValues = new HashMap<>();
 		
 		for(int i = 0; i < cellsNode.size(); i++) {
 			Double col = cellsNode.get(i).get("Coordinates").get("column").asDouble();
+			Double row = cellsNode.get(i).get("Coordinates").get("row").asDouble();
 			String cleanedText = cellsNode.get(i).get("cleanedText").asText();
-			numRows.add(cellsNode.get(i).get("Coordinates").get("row").asDouble());
+			
+			numRows.add(row);
 			numCol.add(col);
+			
 			if(cleanedText.equals("Null")) {
 				this.setNumNullValues(this.getNumNullValues()+1);
 			}
+			
 			if(colDistinctValues.containsKey(col)) {
 				colDistinctValues.get(col).add(cleanedText);
 			}
@@ -205,6 +221,15 @@ public class Statistica {
 				distinctWords.add(cleanedText);
 				colDistinctValues.put(col, distinctWords);
 			}
+			
+			if(rowDistinctValues.containsKey(row)) {
+				rowDistinctValues.get(row).add(cleanedText);
+			}
+			else {
+				Set<String> distinctWords = new HashSet<>();
+				distinctWords.add(cleanedText);
+				rowDistinctValues.put(row, distinctWords);
+			}
 		}
 		
 		this.setNRows(this.getNRows() + numRows.size());
@@ -212,6 +237,11 @@ public class Statistica {
 		this.setNColumns(this.getNColumns() + numCol.size());
 		this.setCol2count(numCol.size());
 		this.setDistinct2col(colDistinctValues);
+		this.setDistinct2row(rowDistinctValues);
+	}
+	
+	public void generateMetrics(BufferedReader br) {
+		Judge judge = new TrecJudge(br); 
 	}
 	
 

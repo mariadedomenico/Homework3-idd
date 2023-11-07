@@ -48,17 +48,21 @@ public class MainClass {
 			System.out.println("\nNumero medio righe: " + stat.getNRows());
 			System.out.println("\nNumero medio colonne: " + stat.getNColumns());
 			System.out.println("\nNumero medio valori nulli per tabella: " + stat.getNumNullValues());
-			System.out.println("\nDistribuzione numero di righe : ");
+			System.out.println("\nDistribuzione numero di righe: ");
 			for(Integer i : stat.getRow2count().keySet()) {
 				System.out.println(stat.getRow2count().get(i) + " tabelle hanno " + i + " righe");
 			}
-			System.out.println("\nDistribuzione numero di colonne : ");
+			System.out.println("\nDistribuzione numero di colonne: ");
 			for(Integer i : stat.getCol2count().keySet()) {
 				System.out.println(stat.getCol2count().get(i) + " tabelle hanno " + i + " colonne");
 			}
-			System.out.println("\nDistribuzione valori distinti : ");
+			System.out.println("\nDistribuzione valori distinti per colonna: ");
 			for(Integer i : stat.getDistinct2col().keySet()) {
 				System.out.println(stat.getDistinct2col().get(i) + " colonne hanno " + i + " valori distinti");
+			}
+			System.out.println("\nDistribuzione valori distinti per riga: ");
+			for(Integer i : stat.getDistinct2row().keySet()) {
+				System.out.println(stat.getDistinct2row().get(i) + " righe hanno " + i + " valori distinti");
 			}
 			
 		}
