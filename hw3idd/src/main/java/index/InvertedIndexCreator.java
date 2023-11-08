@@ -50,7 +50,7 @@ public class InvertedIndexCreator {
 		}
 	}
 
-	public void createIndex(String tablePath, Path indexPath, Statistica stat) throws Exception {
+	public void createIndex(String tablePath, Path indexPath) throws Exception {
 
 		Directory directory = null;
 
@@ -73,7 +73,7 @@ public class InvertedIndexCreator {
 			IndexWriter writer = new IndexWriter(directory, config);
 			writer.deleteAll(); 
 
-			this.readTables(tablePath, indexPath, writer, stat);
+			this.readTables(tablePath, indexPath, writer);
 			writer.commit();
 			writer.close();
 		}
@@ -83,7 +83,7 @@ public class InvertedIndexCreator {
 
 	}
 
-	public void readTables(String tablePath, Path indexPath, IndexWriter writer, Statistica stat) throws Exception {
+	public void readTables(String tablePath, Path indexPath, IndexWriter writer) throws Exception {
 		
 		Map<Integer, List<String>> cells2column = new HashMap<>();
 		BufferedReader br = null;

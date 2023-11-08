@@ -2,6 +2,7 @@ package index;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -19,13 +20,12 @@ public class MainClass {
 		Path indexPath = Paths.get("/Users/elisacatena/Desktop/index");   //path per memorizzare l'indice
 		String tablePath = System.getProperty("user.dir") + "/src/main/resources/tables/tables.json";
 		Scanner scanner = new Scanner(System.in);
-		Statistica stat = new Statistica();
 		
 		try {
 			
 			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
 			
-			indexCreator.createIndex(tablePath, indexPath, stat);
+			indexCreator.createIndex(tablePath, indexPath);
 
 
 			Map<Cella, Integer> set2count = new HashMap<>();
@@ -35,15 +35,16 @@ public class MainClass {
 			String queryReader = scanner.nextLine();
 			String[] input = queryReader.split(",");
 			//elimina le query duplicate dall'input
-			List<String> listWithDuplicates = Arrays.asList(input);
-			Set<String> setWithoutDuplicates = new HashSet<>(listWithDuplicates);
-			String[] newInput = setWithoutDuplicates.toArray(new String[0]);
-			for(int i = 0; i < newInput.length; i++) {
-				postingListReader.readPostingList(indexPath, newInput[i], set2count);
+			Set<String> setWithoutDuplicates = new HashSet<>(Arrays.asList(input));
+			List<String> inputWithoutDuplicates = new ArrayList<>(setWithoutDuplicates);
+			
+			for(int i = 0; i < inputWithoutDuplicates.size(); i++) {
+				postingListReader.readPostingList(indexPath, inputWithoutDuplicates.get(i), set2count);
 			}
 
 			scanner.close();
-			stat.createStats(tablePath);
+			Statistica stat = new Statistica(inputWithoutDuplicates);
+			stat.createStats(tablePath, indexPath);
 			System.out.println("\nNumero tabelle: " + stat.getNTables().intValue());
 			System.out.println("\nNumero medio righe: " + stat.getNRows());
 			System.out.println("\nNumero medio colonne: " + stat.getNColumns());
@@ -64,7 +65,7 @@ public class MainClass {
 			for(Integer i : stat.getDistinct2row().keySet()) {
 				System.out.println(stat.getDistinct2row().get(i) + " righe hanno " + i + " valori distinti");
 			}
-			
+			System.out.println("\nPrecision totale:" + stat.getPrecision());
 		}
 		catch(Exception e) {
 			e.printStackTrace();

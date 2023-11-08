@@ -3,8 +3,9 @@ package index;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -15,18 +16,22 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.apache.lucene.benchmark.quality.Judge;
-import org.apache.lucene.benchmark.quality.QualityBenchmark;
-import org.apache.lucene.benchmark.quality.QualityQuery;
-import org.apache.lucene.benchmark.quality.QualityQueryParser;
-import org.apache.lucene.benchmark.quality.QualityStats;
-import org.apache.lucene.benchmark.quality.trec.TrecJudge;
-import org.apache.lucene.benchmark.quality.trec.TrecTopicsReader;
-import org.apache.lucene.benchmark.quality.utils.SimpleQQParser;
-import org.apache.lucene.benchmark.quality.utils.SubmissionReport;
+import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.LeafReader;
+import org.apache.lucene.index.PostingsEnum;
+import org.apache.lucene.index.Terms;
+import org.apache.lucene.index.TermsEnum;
+import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.search.Query;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.BytesRef;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -43,12 +48,16 @@ public class Statistica {
 	private Map<Integer, Integer> row2count;
 	private Map<Integer, Integer> distinct2col;
 	private Map<Integer, Integer> distinct2row;
+	private List<String> input;
+	private Double precision;
+	private Double recall;
 
-	public Statistica() {
+	public Statistica(List<String> input) {
 		this.col2count = new HashMap<>();
 		this.row2count = new HashMap<>();
 		this.distinct2col = new HashMap<>();
 		this.distinct2row = new HashMap<>();
+		this.input = input;
 	}
 
 	public Double getNTables() {
@@ -144,6 +153,30 @@ public class Statistica {
 		}
 	}
 
+	public List<String> getInput() {
+		return input;
+	}
+
+	public void setInput(List<String> input) {
+		this.input = input;
+	}
+
+	public Double getPrecision() {
+		return precision;
+	}
+
+	public void setPrecision(Double precision) {
+		this.precision = precision;
+	}
+
+	public Double getRecall() {
+		return recall;
+	}
+
+	public void setRecall(Double recall) {
+		this.recall = recall;
+	}
+
 	public <K, V extends Comparable<? super V>> Map<K, V> sortByValue(Map<K, V> map) {
 		List<Entry<K, V>> list = new ArrayList<>(map.entrySet());
 		list.sort(Collections.reverseOrder(Entry.comparingByValue()));
@@ -170,7 +203,7 @@ public class Statistica {
 		}
 	}
 
-	public void createStats(String tablePath) {
+	public void createStats(String tablePath, Path indexPath) throws ParseException {
 		BufferedReader br = null;
 		Double nTab = 0.0;
 
@@ -195,6 +228,7 @@ public class Statistica {
 			this.setNRows(this.getNRows()/this.getNTables());
 			this.setNColumns(this.getNColumns()/this.getNTables());
 			this.setNumNullValues(this.getNumNullValues()/this.getNTables());
+			this.generateMetrics(indexPath);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -234,7 +268,7 @@ public class Statistica {
 					distinctWords.add(cleanedText);
 					colDistinctValues.put(col, distinctWords);
 				}
-	
+
 				if(rowDistinctValues.containsKey(row)) {
 					rowDistinctValues.get(row).add(cleanedText);
 				}
@@ -244,6 +278,7 @@ public class Statistica {
 					rowDistinctValues.put(row, distinctWords);
 				}
 			}
+
 		}
 
 		this.setNRows(this.getNRows() + numRows.size());
@@ -254,9 +289,75 @@ public class Statistica {
 		this.setDistinct2row(rowDistinctValues);
 	}
 
-	public void generateMetrics(BufferedReader br) throws IOException {
-		
-		
+	public File createQrelFile(IndexReader indexReader) {
+
+		File file = new File(System.getProperty("user.dir") + "/src/main/resources/qrel/qrel.txt"); 
+
+		try {
+			FileWriter fw = new FileWriter(file);
+			if(!file.exists()) {		
+				file.createNewFile();
+			}
+
+			// Ottieni un LeafReader per accedere ai termini
+			LeafReader leafReader = indexReader.leaves().get(0).reader();
+
+			// Ottieni i termini per il campo specificato
+			Terms terms = leafReader.terms("cells");
+
+			BytesRef term = null;
+			// Itera sui termini
+			if (terms != null) {
+				TermsEnum termsEnum = terms.iterator();
+				termsEnum = terms.iterator();
+				while ((term = termsEnum.next()) != null) {
+					String termValue = term.utf8ToString();
+					if (input.contains(termValue)) {
+						PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.POSITIONS);
+						int docID;
+						while((docID = postingsEnum.nextDoc()) != PostingsEnum.NO_MORE_DOCS) {
+							fw.write(this.getInput().indexOf(term.utf8ToString()) + " " + docID + " " + "1\n");
+
+						}
+					}
+				}
+			}
+			fw.close();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		return file;
+	}
+
+	public void generateMetrics(Path indexPath) throws IOException, ParseException {
+
+		Directory directory = FSDirectory.open(indexPath);
+		IndexReader indexReader = DirectoryReader.open(directory);
+		IndexSearcher searcher = new IndexSearcher(indexReader);
+		QueryParser queryParser = new QueryParser("cells", new WhitespaceAnalyzer());
+
+		File qrel = this.createQrelFile(indexReader);
+
+		Double relDoc = 0.0;
+		Double retrievedDoc = 0.0;
+
+		for(String s : this.input) {
+			Query query = queryParser.parse(s);
+			TopDocs hits = searcher.search(query, 2);
+			retrievedDoc += hits.scoreDocs.length;
+			for (int i = 0; i < hits.scoreDocs.length; i++) {
+				ScoreDoc scoreDoc = hits.scoreDocs[i];
+				if(scoreDoc.doc > 0.5) {
+					relDoc++;
+				}
+			}
+		}
+		this.setPrecision(relDoc/retrievedDoc);
+
+		directory.close();
+		indexReader.close();
+
 	}
 
 
