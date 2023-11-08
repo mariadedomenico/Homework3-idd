@@ -1,6 +1,7 @@
 package index;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,8 +16,17 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.lucene.benchmark.quality.Judge;
+import org.apache.lucene.benchmark.quality.QualityBenchmark;
+import org.apache.lucene.benchmark.quality.QualityQuery;
+import org.apache.lucene.benchmark.quality.QualityQueryParser;
 import org.apache.lucene.benchmark.quality.QualityStats;
 import org.apache.lucene.benchmark.quality.trec.TrecJudge;
+import org.apache.lucene.benchmark.quality.trec.TrecTopicsReader;
+import org.apache.lucene.benchmark.quality.utils.SimpleQQParser;
+import org.apache.lucene.benchmark.quality.utils.SubmissionReport;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -215,22 +225,24 @@ public class Statistica {
 				this.setNumNullValues(this.getNumNullValues()+1);
 			}
 
-			if(colDistinctValues.containsKey(col)) {
-				colDistinctValues.get(col).add(cleanedText);
-			}
-			else {
-				Set<String> distinctWords = new HashSet<>();
-				distinctWords.add(cleanedText);
-				colDistinctValues.put(col, distinctWords);
-			}
-
-			if(rowDistinctValues.containsKey(row)) {
-				rowDistinctValues.get(row).add(cleanedText);
-			}
-			else {
-				Set<String> distinctWords = new HashSet<>();
-				distinctWords.add(cleanedText);
-				rowDistinctValues.put(row, distinctWords);
+			if(!cellsNode.get(i).get("isHeader").booleanValue()) {
+				if(colDistinctValues.containsKey(col)) {
+					colDistinctValues.get(col).add(cleanedText);
+				}
+				else {
+					Set<String> distinctWords = new HashSet<>();
+					distinctWords.add(cleanedText);
+					colDistinctValues.put(col, distinctWords);
+				}
+	
+				if(rowDistinctValues.containsKey(row)) {
+					rowDistinctValues.get(row).add(cleanedText);
+				}
+				else {
+					Set<String> distinctWords = new HashSet<>();
+					distinctWords.add(cleanedText);
+					rowDistinctValues.put(row, distinctWords);
+				}
 			}
 		}
 
@@ -242,18 +254,10 @@ public class Statistica {
 		this.setDistinct2row(rowDistinctValues);
 	}
 
-//	public void generateMetrics(BufferedReader br) throws IOException {
-//                
-//		PrintWriter logger = new PrintWriter(System.out, true);         
-//		
-//		Judge judge = new TrecJudge(br);                       
-//		
-// 
-//		QualityStats stats[] = qrun.execute(judge,null);        
-//		QualityStats avg = QualityStats.average(stats);           
-//  
-//   
-//	}
+	public void generateMetrics(BufferedReader br) throws IOException {
+		
+		
+	}
 
 
 }

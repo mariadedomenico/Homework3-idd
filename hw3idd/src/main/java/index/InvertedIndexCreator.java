@@ -34,7 +34,7 @@ public class InvertedIndexCreator {
 
 		for(int i = 0; i < cells.size(); i++) {
 			column = cells.get(i).get("Coordinates").get("column").asInt();
-			if(cells.get(i).get("cleanedText").isNull()) {
+			if(cells.get(i).get("cleanedText").isNull() || cells.get(i).get("isHeader").booleanValue()) {
 				continue;
 			}
 			
@@ -101,7 +101,9 @@ public class InvertedIndexCreator {
 				try {
 					JsonNode rootNode = objectMapper.readTree(currentLine);
 					
-					
+//					if(rootNode.get("cells").get("isHeader").asBoolean()) {
+//						continue;
+//					}
 					// Estrai l'oggetto "cells"
 					JsonNode cellsNode = rootNode.get("cells");
 					String tableId = rootNode.get("_id").asText();
