@@ -11,23 +11,35 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import org.apache.lucene.index.DirectoryReader;
+import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
+
 import table.Cella;
 
 public class MainClass {
+	
+	private final static Path indexPath = Paths.get("/Users/elisacatena/Desktop/index"); 
+	//private final static String tablePath = System.getProperty("user.dir") + "/src/main/resources/tables/myTables.json";
+	private final static String tablePath = "/Users/elisacatena/Desktop/tables.json";
+
 
 	public static void main(String args[]) throws Exception {
 		
-		Path indexPath = Paths.get("/Users/elisacatena/Desktop/index");   //path per memorizzare l'indice
-		String tablePath = System.getProperty("user.dir") + "/src/main/resources/tables/tables.json";
 		Scanner scanner = new Scanner(System.in);
 		
 		try {
 			
-			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
+//			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
+//			
+//			indexCreator.createIndex(tablePath, indexPath);
 			
-			indexCreator.createIndex(tablePath, indexPath);
-
-
+			Directory directory = FSDirectory.open(indexPath);
+			IndexReader indexReader = DirectoryReader.open(directory);
+			IndexSearcher searcher = new IndexSearcher(indexReader);
+			
 			Map<Cella, Integer> set2count = new HashMap<>();
 			PostingListReader postingListReader = new PostingListReader();
 
@@ -39,33 +51,15 @@ public class MainClass {
 			List<String> inputWithoutDuplicates = new ArrayList<>(setWithoutDuplicates);
 			
 			for(int i = 0; i < inputWithoutDuplicates.size(); i++) {
-				postingListReader.readPostingList(indexPath, inputWithoutDuplicates.get(i), set2count);
+				System.out.println("input["+i+"]: "+inputWithoutDuplicates.get(i));
+				postingListReader.readPostingList(indexReader, searcher, inputWithoutDuplicates.get(i), set2count);
 			}
 
 			scanner.close();
+			indexReader.close();
 			Statistica stat = new Statistica(inputWithoutDuplicates);
 			stat.createStats(tablePath, indexPath);
-			System.out.println("\nNumero tabelle: " + stat.getNTables().intValue());
-			System.out.println("\nNumero medio righe: " + stat.getNRows());
-			System.out.println("\nNumero medio colonne: " + stat.getNColumns());
-			System.out.println("\nNumero medio valori nulli per tabella: " + stat.getNumNullValues());
-			System.out.println("\nDistribuzione numero di righe: ");
-			for(Integer i : stat.getRow2count().keySet()) {
-				System.out.println(stat.getRow2count().get(i) + " tabelle hanno " + i + " righe");
-			}
-			System.out.println("\nDistribuzione numero di colonne: ");
-			for(Integer i : stat.getCol2count().keySet()) {
-				System.out.println(stat.getCol2count().get(i) + " tabelle hanno " + i + " colonne");
-			}
-			System.out.println("\nDistribuzione valori distinti per colonna: ");
-			for(Integer i : stat.getDistinct2col().keySet()) {
-				System.out.println(stat.getDistinct2col().get(i) + " colonne hanno " + i + " valori distinti");
-			}
-			System.out.println("\nDistribuzione valori distinti per riga: ");
-			for(Integer i : stat.getDistinct2row().keySet()) {
-				System.out.println(stat.getDistinct2row().get(i) + " righe hanno " + i + " valori distinti");
-			}
-			System.out.println("\nPrecision totale:" + stat.getPrecision());
+			stat.findTopK(set2count);
 		}
 		catch(Exception e) {
 			e.printStackTrace();

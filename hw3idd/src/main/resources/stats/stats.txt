@@ -1,0 +1,1719 @@
+
+Numero tabelle: 550271
+
+Numero medio righe: 18.203808668819544
+
+Numero medio colonne: 4.377555786149006
+
+Numero medio valori nulli per tabella: 1.4538291132914509E-5
+
+Distribuzione numero di righe:
+1 tabelle hanno 2048 righe
+1 tabelle hanno 3 righe
+40509 tabelle hanno 4 righe
+42468 tabelle hanno 5 righe
+53420 tabelle hanno 6 righe
+1 tabelle hanno 2054 righe
+60894 tabelle hanno 7 righe
+40098 tabelle hanno 8 righe
+35028 tabelle hanno 9 righe
+29135 tabelle hanno 10 righe
+27697 tabelle hanno 11 righe
+1 tabelle hanno 1035 righe
+19047 tabelle hanno 12 righe
+19009 tabelle hanno 13 righe
+13361 tabelle hanno 14 righe
+1 tabelle hanno 1038 righe
+12609 tabelle hanno 15 righe
+10073 tabelle hanno 16 righe
+11848 tabelle hanno 17 righe
+7711 tabelle hanno 18 righe
+8266 tabelle hanno 19 righe
+1 tabelle hanno 1043 righe
+6125 tabelle hanno 20 righe
+7385 tabelle hanno 21 righe
+5498 tabelle hanno 22 righe
+5989 tabelle hanno 23 righe
+1 tabelle hanno 1047 righe
+5017 tabelle hanno 24 righe
+5173 tabelle hanno 25 righe
+3987 tabelle hanno 26 righe
+3670 tabelle hanno 27 righe
+1 tabelle hanno 1051 righe
+3341 tabelle hanno 28 righe
+3175 tabelle hanno 29 righe
+1 tabelle hanno 1053 righe
+2736 tabelle hanno 30 righe
+3221 tabelle hanno 31 righe
+2785 tabelle hanno 32 righe
+3044 tabelle hanno 33 righe
+2601 tabelle hanno 34 righe
+2338 tabelle hanno 35 righe
+2117 tabelle hanno 36 righe
+2143 tabelle hanno 37 righe
+1728 tabelle hanno 38 righe
+1672 tabelle hanno 39 righe
+1483 tabelle hanno 40 righe
+1560 tabelle hanno 41 righe
+1248 tabelle hanno 42 righe
+1218 tabelle hanno 43 righe
+1211 tabelle hanno 44 righe
+1123 tabelle hanno 45 righe
+1051 tabelle hanno 46 righe
+1021 tabelle hanno 47 righe
+946 tabelle hanno 48 righe
+908 tabelle hanno 49 righe
+831 tabelle hanno 50 righe
+1048 tabelle hanno 51 righe
+1 tabelle hanno 1075 righe
+847 tabelle hanno 52 righe
+959 tabelle hanno 53 righe
+790 tabelle hanno 54 righe
+729 tabelle hanno 55 righe
+649 tabelle hanno 56 righe
+582 tabelle hanno 57 righe
+611 tabelle hanno 58 righe
+559 tabelle hanno 59 righe
+528 tabelle hanno 60 righe
+568 tabelle hanno 61 righe
+1 tabelle hanno 1085 righe
+496 tabelle hanno 62 righe
+439 tabelle hanno 63 righe
+484 tabelle hanno 64 righe
+444 tabelle hanno 65 righe
+455 tabelle hanno 66 righe
+1 tabelle hanno 1090 righe
+391 tabelle hanno 67 righe
+424 tabelle hanno 68 righe
+371 tabelle hanno 69 righe
+381 tabelle hanno 70 righe
+384 tabelle hanno 71 righe
+1 tabelle hanno 3143 righe
+381 tabelle hanno 72 righe
+296 tabelle hanno 73 righe
+1 tabelle hanno 2121 righe
+310 tabelle hanno 74 righe
+306 tabelle hanno 75 righe
+342 tabelle hanno 76 righe
+271 tabelle hanno 77 righe
+269 tabelle hanno 78 righe
+264 tabelle hanno 79 righe
+240 tabelle hanno 80 righe
+261 tabelle hanno 81 righe
+264 tabelle hanno 82 righe
+239 tabelle hanno 83 righe
+248 tabelle hanno 84 righe
+1 tabelle hanno 2132 righe
+213 tabelle hanno 85 righe
+225 tabelle hanno 86 righe
+199 tabelle hanno 87 righe
+188 tabelle hanno 88 righe
+1 tabelle hanno 2136 righe
+186 tabelle hanno 89 righe
+201 tabelle hanno 90 righe
+185 tabelle hanno 91 righe
+2 tabelle hanno 1115 righe
+199 tabelle hanno 92 righe
+191 tabelle hanno 93 righe
+181 tabelle hanno 94 righe
+173 tabelle hanno 95 righe
+175 tabelle hanno 96 righe
+168 tabelle hanno 97 righe
+163 tabelle hanno 98 righe
+146 tabelle hanno 99 righe
+141 tabelle hanno 100 righe
+327 tabelle hanno 101 righe
+4912 tabelle hanno 102 righe
+152 tabelle hanno 103 righe
+129 tabelle hanno 104 righe
+145 tabelle hanno 105 righe
+139 tabelle hanno 106 righe
+128 tabelle hanno 107 righe
+117 tabelle hanno 108 righe
+137 tabelle hanno 109 righe
+117 tabelle hanno 110 righe
+118 tabelle hanno 111 righe
+123 tabelle hanno 112 righe
+120 tabelle hanno 113 righe
+126 tabelle hanno 114 righe
+114 tabelle hanno 115 righe
+100 tabelle hanno 116 righe
+123 tabelle hanno 117 righe
+1 tabelle hanno 1141 righe
+87 tabelle hanno 118 righe
+112 tabelle hanno 119 righe
+81 tabelle hanno 120 righe
+1 tabelle hanno 1144 righe
+132 tabelle hanno 121 righe
+94 tabelle hanno 122 righe
+78 tabelle hanno 123 righe
+90 tabelle hanno 124 righe
+112 tabelle hanno 125 righe
+112 tabelle hanno 126 righe
+98 tabelle hanno 127 righe
+84 tabelle hanno 128 righe
+140 tabelle hanno 129 righe
+109 tabelle hanno 130 righe
+79 tabelle hanno 131 righe
+67 tabelle hanno 132 righe
+71 tabelle hanno 133 righe
+82 tabelle hanno 134 righe
+75 tabelle hanno 135 righe
+1 tabelle hanno 1159 righe
+73 tabelle hanno 136 righe
+78 tabelle hanno 137 righe
+59 tabelle hanno 138 righe
+62 tabelle hanno 139 righe
+60 tabelle hanno 140 righe
+55 tabelle hanno 141 righe
+66 tabelle hanno 142 righe
+51 tabelle hanno 143 righe
+66 tabelle hanno 144 righe
+42 tabelle hanno 145 righe
+51 tabelle hanno 146 righe
+53 tabelle hanno 147 righe
+55 tabelle hanno 148 righe
+42 tabelle hanno 149 righe
+38 tabelle hanno 150 righe
+100 tabelle hanno 151 righe
+55 tabelle hanno 152 righe
+51 tabelle hanno 153 righe
+50 tabelle hanno 154 righe
+44 tabelle hanno 155 righe
+45 tabelle hanno 156 righe
+44 tabelle hanno 157 righe
+44 tabelle hanno 158 righe
+1 tabelle hanno 1182 righe
+35 tabelle hanno 159 righe
+34 tabelle hanno 160 righe
+43 tabelle hanno 161 righe
+38 tabelle hanno 162 righe
+38 tabelle hanno 163 righe
+42 tabelle hanno 164 righe
+1 tabelle hanno 1188 righe
+47 tabelle hanno 165 righe
+36 tabelle hanno 166 righe
+1 tabelle hanno 1190 righe
+51 tabelle hanno 167 righe
+30 tabelle hanno 168 righe
+45 tabelle hanno 169 righe
+19 tabelle hanno 170 righe
+29 tabelle hanno 171 righe
+35 tabelle hanno 172 righe
+39 tabelle hanno 173 righe
+26 tabelle hanno 174 righe
+27 tabelle hanno 175 righe
+25 tabelle hanno 176 righe
+34 tabelle hanno 177 righe
+21 tabelle hanno 178 righe
+30 tabelle hanno 179 righe
+1 tabelle hanno 1203 righe
+23 tabelle hanno 180 righe
+27 tabelle hanno 181 righe
+33 tabelle hanno 182 righe
+26 tabelle hanno 183 righe
+1 tabelle hanno 1207 righe
+25 tabelle hanno 184 righe
+1 tabelle hanno 2232 righe
+25 tabelle hanno 185 righe
+28 tabelle hanno 186 righe
+21 tabelle hanno 187 righe
+23 tabelle hanno 188 righe
+33 tabelle hanno 189 righe
+1 tabelle hanno 3261 righe
+20 tabelle hanno 190 righe
+23 tabelle hanno 191 righe
+26 tabelle hanno 192 righe
+14 tabelle hanno 193 righe
+73 tabelle hanno 194 righe
+1 tabelle hanno 1218 righe
+31 tabelle hanno 195 righe
+29 tabelle hanno 196 righe
+28 tabelle hanno 197 righe
+21 tabelle hanno 198 righe
+40 tabelle hanno 199 righe
+23 tabelle hanno 200 righe
+42 tabelle hanno 201 righe
+22 tabelle hanno 202 righe
+31 tabelle hanno 203 righe
+23 tabelle hanno 204 righe
+1 tabelle hanno 1229 righe
+22 tabelle hanno 205 righe
+25 tabelle hanno 206 righe
+26 tabelle hanno 207 righe
+25 tabelle hanno 208 righe
+24 tabelle hanno 209 righe
+17 tabelle hanno 210 righe
+24 tabelle hanno 211 righe
+22 tabelle hanno 212 righe
+14 tabelle hanno 213 righe
+14 tabelle hanno 214 righe
+21 tabelle hanno 215 righe
+19 tabelle hanno 216 righe
+26 tabelle hanno 217 righe
+22 tabelle hanno 218 righe
+13 tabelle hanno 219 righe
+24 tabelle hanno 220 righe
+15 tabelle hanno 221 righe
+9 tabelle hanno 222 righe
+18 tabelle hanno 223 righe
+18 tabelle hanno 224 righe
+25 tabelle hanno 225 righe
+24 tabelle hanno 226 righe
+25 tabelle hanno 227 righe
+15 tabelle hanno 228 righe
+16 tabelle hanno 229 righe
+22 tabelle hanno 230 righe
+22 tabelle hanno 231 righe
+17 tabelle hanno 232 righe
+23 tabelle hanno 233 righe
+16 tabelle hanno 234 righe
+25 tabelle hanno 235 righe
+14 tabelle hanno 236 righe
+20 tabelle hanno 237 righe
+12 tabelle hanno 238 righe
+14 tabelle hanno 239 righe
+11 tabelle hanno 240 righe
+25 tabelle hanno 241 righe
+16 tabelle hanno 242 righe
+13 tabelle hanno 243 righe
+1 tabelle hanno 2291 righe
+22 tabelle hanno 244 righe
+18 tabelle hanno 245 righe
+1 tabelle hanno 2293 righe
+17 tabelle hanno 246 righe
+1 tabelle hanno 1270 righe
+13 tabelle hanno 247 righe
+8 tabelle hanno 248 righe
+11 tabelle hanno 249 righe
+13 tabelle hanno 250 righe
+20 tabelle hanno 251 righe
+8 tabelle hanno 252 righe
+15 tabelle hanno 253 righe
+1 tabelle hanno 1277 righe
+8 tabelle hanno 254 righe
+12 tabelle hanno 255 righe
+11 tabelle hanno 256 righe
+12 tabelle hanno 257 righe
+1 tabelle hanno 2305 righe
+5 tabelle hanno 258 righe
+12 tabelle hanno 259 righe
+17 tabelle hanno 260 righe
+1 tabelle hanno 1284 righe
+17 tabelle hanno 261 righe
+16 tabelle hanno 262 righe
+12 tabelle hanno 263 righe
+15 tabelle hanno 264 righe
+13 tabelle hanno 265 righe
+8 tabelle hanno 266 righe
+11 tabelle hanno 267 righe
+6 tabelle hanno 268 righe
+9 tabelle hanno 269 righe
+13 tabelle hanno 270 righe
+10 tabelle hanno 271 righe
+8 tabelle hanno 272 righe
+10 tabelle hanno 273 righe
+8 tabelle hanno 274 righe
+8 tabelle hanno 275 righe
+6 tabelle hanno 276 righe
+8 tabelle hanno 277 righe
+11 tabelle hanno 278 righe
+8 tabelle hanno 279 righe
+8 tabelle hanno 280 righe
+7 tabelle hanno 281 righe
+5 tabelle hanno 282 righe
+10 tabelle hanno 283 righe
+13 tabelle hanno 284 righe
+6 tabelle hanno 285 righe
+8 tabelle hanno 286 righe
+6 tabelle hanno 287 righe
+11 tabelle hanno 288 righe
+8 tabelle hanno 289 righe
+9 tabelle hanno 290 righe
+7 tabelle hanno 291 righe
+4 tabelle hanno 292 righe
+7 tabelle hanno 293 righe
+1 tabelle hanno 2341 righe
+6 tabelle hanno 294 righe
+6 tabelle hanno 295 righe
+9 tabelle hanno 296 righe
+5 tabelle hanno 297 righe
+3 tabelle hanno 298 righe
+5 tabelle hanno 299 righe
+1 tabelle hanno 1323 righe
+12 tabelle hanno 300 righe
+16 tabelle hanno 301 righe
+2 tabelle hanno 302 righe
+12 tabelle hanno 303 righe
+9 tabelle hanno 304 righe
+7 tabelle hanno 305 righe
+3 tabelle hanno 306 righe
+5 tabelle hanno 307 righe
+12 tabelle hanno 308 righe
+9 tabelle hanno 309 righe
+9 tabelle hanno 310 righe
+3 tabelle hanno 311 righe
+3 tabelle hanno 312 righe
+5 tabelle hanno 313 righe
+5 tabelle hanno 314 righe
+7 tabelle hanno 315 righe
+8 tabelle hanno 316 righe
+7 tabelle hanno 317 righe
+1 tabelle hanno 1341 righe
+3 tabelle hanno 318 righe
+4 tabelle hanno 319 righe
+6 tabelle hanno 320 righe
+4 tabelle hanno 321 righe
+2 tabelle hanno 322 righe
+2 tabelle hanno 323 righe
+5 tabelle hanno 324 righe
+6 tabelle hanno 325 righe
+5 tabelle hanno 326 righe
+4 tabelle hanno 327 righe
+9 tabelle hanno 328 righe
+3 tabelle hanno 329 righe
+2 tabelle hanno 330 righe
+2 tabelle hanno 331 righe
+3 tabelle hanno 332 righe
+1 tabelle hanno 333 righe
+4 tabelle hanno 334 righe
+9 tabelle hanno 335 righe
+6 tabelle hanno 336 righe
+5 tabelle hanno 337 righe
+4 tabelle hanno 338 righe
+5 tabelle hanno 339 righe
+9 tabelle hanno 340 righe
+3 tabelle hanno 341 righe
+5 tabelle hanno 342 righe
+4 tabelle hanno 343 righe
+7 tabelle hanno 344 righe
+6 tabelle hanno 345 righe
+5 tabelle hanno 346 righe
+5 tabelle hanno 347 righe
+5 tabelle hanno 348 righe
+7 tabelle hanno 349 righe
+10 tabelle hanno 350 righe
+6 tabelle hanno 352 righe
+5 tabelle hanno 353 righe
+3 tabelle hanno 354 righe
+2 tabelle hanno 355 righe
+5 tabelle hanno 356 righe
+2 tabelle hanno 1380 righe
+1 tabelle hanno 357 righe
+6 tabelle hanno 358 righe
+5 tabelle hanno 359 righe
+2 tabelle hanno 360 righe
+2 tabelle hanno 361 righe
+9 tabelle hanno 362 righe
+5 tabelle hanno 363 righe
+11 tabelle hanno 364 righe
+7 tabelle hanno 365 righe
+3 tabelle hanno 366 righe
+5 tabelle hanno 367 righe
+1 tabelle hanno 1391 righe
+9 tabelle hanno 368 righe
+2 tabelle hanno 369 righe
+2 tabelle hanno 370 righe
+3 tabelle hanno 371 righe
+4 tabelle hanno 372 righe
+4 tabelle hanno 373 righe
+5 tabelle hanno 374 righe
+3 tabelle hanno 375 righe
+3 tabelle hanno 376 righe
+1 tabelle hanno 377 righe
+6 tabelle hanno 378 righe
+3 tabelle hanno 379 righe
+2 tabelle hanno 380 righe
+1 tabelle hanno 382 righe
+3 tabelle hanno 383 righe
+6 tabelle hanno 384 righe
+1 tabelle hanno 385 righe
+1 tabelle hanno 1409 righe
+1 tabelle hanno 2433 righe
+3 tabelle hanno 386 righe
+2 tabelle hanno 387 righe
+4 tabelle hanno 388 righe
+4 tabelle hanno 389 righe
+4 tabelle hanno 390 righe
+1 tabelle hanno 391 righe
+2 tabelle hanno 392 righe
+5 tabelle hanno 393 righe
+3 tabelle hanno 394 righe
+6 tabelle hanno 395 righe
+5 tabelle hanno 396 righe
+2 tabelle hanno 397 righe
+1 tabelle hanno 398 righe
+1 tabelle hanno 399 righe
+2 tabelle hanno 400 righe
+4 tabelle hanno 401 righe
+8 tabelle hanno 402 righe
+4 tabelle hanno 403 righe
+3 tabelle hanno 404 righe
+2 tabelle hanno 405 righe
+5 tabelle hanno 406 righe
+4 tabelle hanno 407 righe
+2 tabelle hanno 408 righe
+4 tabelle hanno 410 righe
+5 tabelle hanno 411 righe
+2 tabelle hanno 412 righe
+4 tabelle hanno 413 righe
+6 tabelle hanno 414 righe
+5 tabelle hanno 415 righe
+1 tabelle hanno 2463 righe
+2 tabelle hanno 416 righe
+6 tabelle hanno 417 righe
+5 tabelle hanno 418 righe
+5 tabelle hanno 419 righe
+6 tabelle hanno 420 righe
+1 tabelle hanno 1445 righe
+5 tabelle hanno 421 righe
+2 tabelle hanno 422 righe
+2 tabelle hanno 423 righe
+2 tabelle hanno 424 righe
+2 tabelle hanno 425 righe
+4 tabelle hanno 426 righe
+3 tabelle hanno 427 righe
+1 tabelle hanno 1451 righe
+3 tabelle hanno 428 righe
+3 tabelle hanno 429 righe
+3 tabelle hanno 430 righe
+4 tabelle hanno 431 righe
+5 tabelle hanno 432 righe
+2 tabelle hanno 433 righe
+3 tabelle hanno 435 righe
+4 tabelle hanno 436 righe
+3 tabelle hanno 437 righe
+4 tabelle hanno 438 righe
+4 tabelle hanno 439 righe
+6 tabelle hanno 440 righe
+7 tabelle hanno 441 righe
+7 tabelle hanno 442 righe
+3 tabelle hanno 443 righe
+9 tabelle hanno 444 righe
+10 tabelle hanno 445 righe
+7 tabelle hanno 446 righe
+4 tabelle hanno 447 righe
+4 tabelle hanno 448 righe
+2 tabelle hanno 449 righe
+3 tabelle hanno 450 righe
+5 tabelle hanno 451 righe
+7 tabelle hanno 452 righe
+4 tabelle hanno 453 righe
+4 tabelle hanno 454 righe
+2 tabelle hanno 455 righe
+3 tabelle hanno 456 righe
+4 tabelle hanno 457 righe
+3 tabelle hanno 458 righe
+4 tabelle hanno 459 righe
+6 tabelle hanno 460 righe
+2 tabelle hanno 461 righe
+1 tabelle hanno 2509 righe
+4 tabelle hanno 462 righe
+4 tabelle hanno 463 righe
+4 tabelle hanno 464 righe
+3 tabelle hanno 465 righe
+4 tabelle hanno 466 righe
+3 tabelle hanno 467 righe
+2 tabelle hanno 468 righe
+2 tabelle hanno 469 righe
+2 tabelle hanno 471 righe
+1 tabelle hanno 472 righe
+3 tabelle hanno 473 righe
+1 tabelle hanno 474 righe
+3 tabelle hanno 475 righe
+1 tabelle hanno 476 righe
+1 tabelle hanno 477 righe
+1 tabelle hanno 1503 righe
+1 tabelle hanno 479 righe
+3 tabelle hanno 480 righe
+1 tabelle hanno 481 righe
+1 tabelle hanno 482 righe
+3 tabelle hanno 483 righe
+3 tabelle hanno 484 righe
+1 tabelle hanno 485 righe
+2 tabelle hanno 486 righe
+1 tabelle hanno 487 righe
+3 tabelle hanno 488 righe
+1 tabelle hanno 490 righe
+1 tabelle hanno 491 righe
+3 tabelle hanno 492 righe
+1 tabelle hanno 495 righe
+2 tabelle hanno 497 righe
+3 tabelle hanno 498 righe
+3 tabelle hanno 499 righe
+1 tabelle hanno 500 righe
+2 tabelle hanno 501 righe
+1 tabelle hanno 502 righe
+3 tabelle hanno 503 righe
+4 tabelle hanno 504 righe
+4 tabelle hanno 505 righe
+3 tabelle hanno 506 righe
+2 tabelle hanno 507 righe
+1 tabelle hanno 508 righe
+1 tabelle hanno 509 righe
+1 tabelle hanno 510 righe
+1 tabelle hanno 1534 righe
+2 tabelle hanno 511 righe
+1 tabelle hanno 512 righe
+1 tabelle hanno 1536 righe
+2 tabelle hanno 513 righe
+2 tabelle hanno 514 righe
+2 tabelle hanno 517 righe
+1 tabelle hanno 1543 righe
+1 tabelle hanno 520 righe
+2 tabelle hanno 521 righe
+1 tabelle hanno 522 righe
+4 tabelle hanno 523 righe
+3 tabelle hanno 524 righe
+1 tabelle hanno 525 righe
+3 tabelle hanno 526 righe
+1 tabelle hanno 527 righe
+2 tabelle hanno 528 righe
+1 tabelle hanno 529 righe
+1 tabelle hanno 531 righe
+2 tabelle hanno 533 righe
+1 tabelle hanno 536 righe
+4 tabelle hanno 537 righe
+1 tabelle hanno 539 righe
+3 tabelle hanno 540 righe
+1 tabelle hanno 542 righe
+1 tabelle hanno 543 righe
+2 tabelle hanno 544 righe
+2 tabelle hanno 545 righe
+2 tabelle hanno 547 righe
+2 tabelle hanno 548 righe
+1 tabelle hanno 549 righe
+1 tabelle hanno 550 righe
+2 tabelle hanno 551 righe
+1 tabelle hanno 553 righe
+1 tabelle hanno 554 righe
+1 tabelle hanno 556 righe
+3 tabelle hanno 558 righe
+1 tabelle hanno 559 righe
+2 tabelle hanno 561 righe
+2 tabelle hanno 563 righe
+2 tabelle hanno 564 righe
+1 tabelle hanno 565 righe
+2 tabelle hanno 566 righe
+1 tabelle hanno 2615 righe
+1 tabelle hanno 568 righe
+1 tabelle hanno 569 righe
+5 tabelle hanno 572 righe
+1 tabelle hanno 1599 righe
+2 tabelle hanno 575 righe
+1 tabelle hanno 4671 righe
+1 tabelle hanno 576 righe
+1 tabelle hanno 577 righe
+3 tabelle hanno 578 righe
+1 tabelle hanno 579 righe
+1 tabelle hanno 580 righe
+2 tabelle hanno 581 righe
+2 tabelle hanno 584 righe
+1 tabelle hanno 585 righe
+2 tabelle hanno 1610 righe
+1 tabelle hanno 586 righe
+1 tabelle hanno 587 righe
+1 tabelle hanno 588 righe
+1 tabelle hanno 589 righe
+4 tabelle hanno 590 righe
+1 tabelle hanno 595 righe
+1 tabelle hanno 596 righe
+1 tabelle hanno 598 righe
+1 tabelle hanno 599 righe
+1 tabelle hanno 603 righe
+1 tabelle hanno 604 righe
+1 tabelle hanno 605 righe
+1 tabelle hanno 609 righe
+1 tabelle hanno 610 righe
+1 tabelle hanno 612 righe
+2 tabelle hanno 615 righe
+1 tabelle hanno 617 righe
+2 tabelle hanno 620 righe
+1 tabelle hanno 1648 righe
+1 tabelle hanno 625 righe
+1 tabelle hanno 627 righe
+2 tabelle hanno 628 righe
+1 tabelle hanno 629 righe
+1 tabelle hanno 630 righe
+1 tabelle hanno 631 righe
+1 tabelle hanno 633 righe
+1 tabelle hanno 634 righe
+1 tabelle hanno 635 righe
+1 tabelle hanno 636 righe
+1 tabelle hanno 637 righe
+1 tabelle hanno 639 righe
+2 tabelle hanno 641 righe
+1 tabelle hanno 643 righe
+1 tabelle hanno 646 righe
+1 tabelle hanno 649 righe
+1 tabelle hanno 650 righe
+2 tabelle hanno 655 righe
+2 tabelle hanno 656 righe
+2 tabelle hanno 659 righe
+1 tabelle hanno 662 righe
+1 tabelle hanno 669 righe
+2 tabelle hanno 670 righe
+1 tabelle hanno 671 righe
+4 tabelle hanno 672 righe
+1 tabelle hanno 673 righe
+1 tabelle hanno 1701 righe
+1 tabelle hanno 1707 righe
+1 tabelle hanno 686 righe
+1 tabelle hanno 1711 righe
+2 tabelle hanno 688 righe
+1 tabelle hanno 689 righe
+2 tabelle hanno 690 righe
+1 tabelle hanno 691 righe
+1 tabelle hanno 1716 righe
+1 tabelle hanno 693 righe
+1 tabelle hanno 694 righe
+1 tabelle hanno 697 righe
+1 tabelle hanno 700 righe
+1 tabelle hanno 702 righe
+1 tabelle hanno 703 righe
+1 tabelle hanno 704 righe
+1 tabelle hanno 705 righe
+2 tabelle hanno 709 righe
+1 tabelle hanno 711 righe
+1 tabelle hanno 715 righe
+1 tabelle hanno 716 righe
+1 tabelle hanno 718 righe
+1 tabelle hanno 720 righe
+1 tabelle hanno 721 righe
+1 tabelle hanno 722 righe
+1 tabelle hanno 723 righe
+1 tabelle hanno 724 righe
+1 tabelle hanno 726 righe
+2 tabelle hanno 727 righe
+1 tabelle hanno 730 righe
+1 tabelle hanno 732 righe
+1 tabelle hanno 733 righe
+1 tabelle hanno 742 righe
+1 tabelle hanno 743 righe
+1 tabelle hanno 745 righe
+1 tabelle hanno 1770 righe
+1 tabelle hanno 748 righe
+1 tabelle hanno 749 righe
+1 tabelle hanno 752 righe
+1 tabelle hanno 755 righe
+1 tabelle hanno 767 righe
+1 tabelle hanno 769 righe
+1 tabelle hanno 770 righe
+2 tabelle hanno 771 righe
+1 tabelle hanno 773 righe
+2 tabelle hanno 774 righe
+1 tabelle hanno 781 righe
+1 tabelle hanno 1805 righe
+1 tabelle hanno 782 righe
+1 tabelle hanno 783 righe
+2 tabelle hanno 787 righe
+1 tabelle hanno 793 righe
+1 tabelle hanno 794 righe
+2 tabelle hanno 797 righe
+1 tabelle hanno 798 righe
+1 tabelle hanno 802 righe
+1 tabelle hanno 806 righe
+1 tabelle hanno 809 righe
+1 tabelle hanno 814 righe
+1 tabelle hanno 818 righe
+1 tabelle hanno 820 righe
+1 tabelle hanno 821 righe
+1 tabelle hanno 830 righe
+1 tabelle hanno 832 righe
+1 tabelle hanno 835 righe
+1 tabelle hanno 2891 righe
+1 tabelle hanno 847 righe
+1 tabelle hanno 849 righe
+1 tabelle hanno 1876 righe
+1 tabelle hanno 854 righe
+1 tabelle hanno 855 righe
+1 tabelle hanno 2904 righe
+1 tabelle hanno 863 righe
+1 tabelle hanno 876 righe
+1 tabelle hanno 877 righe
+1 tabelle hanno 888 righe
+1 tabelle hanno 891 righe
+1 tabelle hanno 896 righe
+1 tabelle hanno 917 righe
+1 tabelle hanno 920 righe
+1 tabelle hanno 921 righe
+1 tabelle hanno 926 righe
+1 tabelle hanno 931 righe
+1 tabelle hanno 945 righe
+1 tabelle hanno 950 righe
+1 tabelle hanno 958 righe
+1 tabelle hanno 979 righe
+1 tabelle hanno 6102 righe
+1 tabelle hanno 2009 righe
+1 tabelle hanno 2013 righe
+1 tabelle hanno 994 righe
+1 tabelle hanno 998 righe
+1 tabelle hanno 1001 righe
+1 tabelle hanno 1008 righe
+1 tabelle hanno 1009 righe
+1 tabelle hanno 1016 righe
+1 tabelle hanno 1022 righe
+
+Distribuzione numero di colonne:
+1 tabelle hanno 513 colonne
+1243 tabelle hanno 2 colonne
+247795 tabelle hanno 3 colonne
+182998 tabelle hanno 4 colonne
+53598 tabelle hanno 5 colonne
+23197 tabelle hanno 6 colonne
+15217 tabelle hanno 7 colonne
+5200 tabelle hanno 8 colonne
+2 tabelle hanno 520 colonne
+5168 tabelle hanno 9 colonne
+2299 tabelle hanno 10 colonne
+2108 tabelle hanno 11 colonne
+1560 tabelle hanno 12 colonne
+1744 tabelle hanno 13 colonne
+917 tabelle hanno 14 colonne
+992 tabelle hanno 15 colonne
+872 tabelle hanno 16 colonne
+971 tabelle hanno 17 colonne
+428 tabelle hanno 18 colonne
+686 tabelle hanno 19 colonne
+247 tabelle hanno 20 colonne
+666 tabelle hanno 21 colonne
+260 tabelle hanno 22 colonne
+500 tabelle hanno 23 colonne
+70 tabelle hanno 24 colonne
+292 tabelle hanno 25 colonne
+55 tabelle hanno 26 colonne
+107 tabelle hanno 27 colonne
+48 tabelle hanno 28 colonne
+55 tabelle hanno 29 colonne
+76 tabelle hanno 30 colonne
+94 tabelle hanno 31 colonne
+33 tabelle hanno 32 colonne
+31 tabelle hanno 33 colonne
+103 tabelle hanno 34 colonne
+43 tabelle hanno 35 colonne
+1 tabelle hanno 291 colonne
+43 tabelle hanno 36 colonne
+24 tabelle hanno 37 colonne
+119 tabelle hanno 38 colonne
+2 tabelle hanno 39 colonne
+12 tabelle hanno 40 colonne
+3 tabelle hanno 41 colonne
+23 tabelle hanno 42 colonne
+1 tabelle hanno 43 colonne
+7 tabelle hanno 44 colonne
+1 tabelle hanno 300 colonne
+1 tabelle hanno 45 colonne
+62 tabelle hanno 46 colonne
+1 tabelle hanno 47 colonne
+1 tabelle hanno 560 colonne
+1 tabelle hanno 48 colonne
+1 tabelle hanno 49 colonne
+4 tabelle hanno 51 colonne
+9 tabelle hanno 52 colonne
+12 tabelle hanno 53 colonne
+3 tabelle hanno 54 colonne
+8 tabelle hanno 55 colonne
+9 tabelle hanno 56 colonne
+21 tabelle hanno 57 colonne
+2 tabelle hanno 58 colonne
+2 tabelle hanno 59 colonne
+3 tabelle hanno 60 colonne
+3 tabelle hanno 61 colonne
+4 tabelle hanno 62 colonne
+6 tabelle hanno 63 colonne
+3 tabelle hanno 64 colonne
+5 tabelle hanno 65 colonne
+2 tabelle hanno 66 colonne
+2 tabelle hanno 67 colonne
+18 tabelle hanno 68 colonne
+1 tabelle hanno 70 colonne
+1 tabelle hanno 28999 colonne
+13 tabelle hanno 71 colonne
+1 tabelle hanno 72 colonne
+1 tabelle hanno 73 colonne
+2 tabelle hanno 74 colonne
+1 tabelle hanno 76 colonne
+2 tabelle hanno 77 colonne
+2 tabelle hanno 590 colonne
+1 tabelle hanno 78 colonne
+2 tabelle hanno 80 colonne
+1 tabelle hanno 81 colonne
+2 tabelle hanno 83 colonne
+1 tabelle hanno 86 colonne
+30 tabelle hanno 600 colonne
+2 tabelle hanno 93 colonne
+4 tabelle hanno 97 colonne
+1 tabelle hanno 98 colonne
+2 tabelle hanno 100 colonne
+1 tabelle hanno 101 colonne
+1 tabelle hanno 102 colonne
+1 tabelle hanno 103 colonne
+1 tabelle hanno 360 colonne
+16 tabelle hanno 104 colonne
+26 tabelle hanno 105 colonne
+1 tabelle hanno 111 colonne
+1 tabelle hanno 113 colonne
+1 tabelle hanno 115 colonne
+2 tabelle hanno 120 colonne
+1 tabelle hanno 121 colonne
+1 tabelle hanno 127 colonne
+1 tabelle hanno 390 colonne
+7 tabelle hanno 137 colonne
+1 tabelle hanno 650 colonne
+2 tabelle hanno 138 colonne
+2 tabelle hanno 140 colonne
+1 tabelle hanno 141 colonne
+16 tabelle hanno 400 colonne
+1 tabelle hanno 660 colonne
+2 tabelle hanno 420 colonne
+5 tabelle hanno 164 colonne
+2 tabelle hanno 440 colonne
+1 tabelle hanno 204 colonne
+1 tabelle hanno 220 colonne
+3 tabelle hanno 1000 colonne
+1 tabelle hanno 240 colonne
+7 tabelle hanno 500 colonne
+
+Distribuzione valori distinti per colonna:
+96469 colonne hanno 1 valori distinti
+188217 colonne hanno 2 valori distinti
+288569 colonne hanno 3 valori distinti
+244007 colonne hanno 4 valori distinti
+229022 colonne hanno 5 valori distinti
+232398 colonne hanno 6 valori distinti
+171528 colonne hanno 7 valori distinti
+137512 colonne hanno 8 valori distinti
+105131 colonne hanno 9 valori distinti
+87997 colonne hanno 10 valori distinti
+68138 colonne hanno 11 valori distinti
+60977 colonne hanno 12 valori distinti
+47351 colonne hanno 13 valori distinti
+41330 colonne hanno 14 valori distinti
+34111 colonne hanno 15 valori distinti
+33122 colonne hanno 16 valori distinti
+25548 colonne hanno 17 valori distinti
+21416 colonne hanno 18 valori distinti
+17321 colonne hanno 19 valori distinti
+17197 colonne hanno 20 valori distinti
+13839 colonne hanno 21 valori distinti
+13433 colonne hanno 22 valori distinti
+12199 colonne hanno 23 valori distinti
+11025 colonne hanno 24 valori distinti
+9803 colonne hanno 25 valori distinti
+9897 colonne hanno 26 valori distinti
+7349 colonne hanno 27 valori distinti
+6886 colonne hanno 28 valori distinti
+6513 colonne hanno 29 valori distinti
+6921 colonne hanno 30 valori distinti
+7017 colonne hanno 31 valori distinti
+7067 colonne hanno 32 valori distinti
+6224 colonne hanno 33 valori distinti
+5326 colonne hanno 34 valori distinti
+4961 colonne hanno 35 valori distinti
+4549 colonne hanno 36 valori distinti
+3949 colonne hanno 37 valori distinti
+3536 colonne hanno 38 valori distinti
+3312 colonne hanno 39 valori distinti
+3178 colonne hanno 40 valori distinti
+2855 colonne hanno 41 valori distinti
+2629 colonne hanno 42 valori distinti
+2551 colonne hanno 43 valori distinti
+2497 colonne hanno 44 valori distinti
+2504 colonne hanno 45 valori distinti
+2092 colonne hanno 46 valori distinti
+2085 colonne hanno 47 valori distinti
+1974 colonne hanno 48 valori distinti
+1862 colonne hanno 49 valori distinti
+2061 colonne hanno 50 valori distinti
+1828 colonne hanno 51 valori distinti
+1737 colonne hanno 52 valori distinti
+1454 colonne hanno 53 valori distinti
+1466 colonne hanno 54 valori distinti
+1321 colonne hanno 55 valori distinti
+1260 colonne hanno 56 valori distinti
+1295 colonne hanno 57 valori distinti
+1251 colonne hanno 58 valori distinti
+1187 colonne hanno 59 valori distinti
+1150 colonne hanno 60 valori distinti
+1032 colonne hanno 61 valori distinti
+994 colonne hanno 62 valori distinti
+938 colonne hanno 63 valori distinti
+897 colonne hanno 64 valori distinti
+958 colonne hanno 65 valori distinti
+866 colonne hanno 66 valori distinti
+799 colonne hanno 67 valori distinti
+787 colonne hanno 68 valori distinti
+723 colonne hanno 69 valori distinti
+1 colonne hanno 2117 valori distinti
+751 colonne hanno 70 valori distinti
+753 colonne hanno 71 valori distinti
+657 colonne hanno 72 valori distinti
+652 colonne hanno 73 valori distinti
+596 colonne hanno 74 valori distinti
+659 colonne hanno 75 valori distinti
+637 colonne hanno 76 valori distinti
+538 colonne hanno 77 valori distinti
+525 colonne hanno 78 valori distinti
+483 colonne hanno 79 valori distinti
+579 colonne hanno 80 valori distinti
+532 colonne hanno 81 valori distinti
+489 colonne hanno 82 valori distinti
+441 colonne hanno 83 valori distinti
+428 colonne hanno 84 valori distinti
+430 colonne hanno 85 valori distinti
+395 colonne hanno 86 valori distinti
+399 colonne hanno 87 valori distinti
+439 colonne hanno 88 valori distinti
+414 colonne hanno 89 valori distinti
+416 colonne hanno 90 valori distinti
+378 colonne hanno 91 valori distinti
+420 colonne hanno 92 valori distinti
+410 colonne hanno 93 valori distinti
+392 colonne hanno 94 valori distinti
+371 colonne hanno 95 valori distinti
+320 colonne hanno 96 valori distinti
+310 colonne hanno 97 valori distinti
+332 colonne hanno 98 valori distinti
+339 colonne hanno 99 valori distinti
+9976 colonne hanno 100 valori distinti
+299 colonne hanno 101 valori distinti
+251 colonne hanno 102 valori distinti
+252 colonne hanno 103 valori distinti
+231 colonne hanno 104 valori distinti
+240 colonne hanno 105 valori distinti
+244 colonne hanno 106 valori distinti
+239 colonne hanno 107 valori distinti
+216 colonne hanno 108 valori distinti
+190 colonne hanno 109 valori distinti
+195 colonne hanno 110 valori distinti
+209 colonne hanno 111 valori distinti
+199 colonne hanno 112 valori distinti
+185 colonne hanno 113 valori distinti
+205 colonne hanno 114 valori distinti
+197 colonne hanno 115 valori distinti
+219 colonne hanno 116 valori distinti
+161 colonne hanno 117 valori distinti
+179 colonne hanno 118 valori distinti
+174 colonne hanno 119 valori distinti
+182 colonne hanno 120 valori distinti
+188 colonne hanno 121 valori distinti
+165 colonne hanno 122 valori distinti
+163 colonne hanno 123 valori distinti
+204 colonne hanno 124 valori distinti
+195 colonne hanno 125 valori distinti
+151 colonne hanno 126 valori distinti
+1 colonne hanno 2174 valori distinti
+146 colonne hanno 127 valori distinti
+203 colonne hanno 128 valori distinti
+153 colonne hanno 129 valori distinti
+136 colonne hanno 130 valori distinti
+128 colonne hanno 131 valori distinti
+117 colonne hanno 132 valori distinti
+114 colonne hanno 133 valori distinti
+130 colonne hanno 134 valori distinti
+102 colonne hanno 135 valori distinti
+97 colonne hanno 136 valori distinti
+67 colonne hanno 137 valori distinti
+91 colonne hanno 138 valori distinti
+84 colonne hanno 139 valori distinti
+105 colonne hanno 140 valori distinti
+110 colonne hanno 141 valori distinti
+90 colonne hanno 142 valori distinti
+111 colonne hanno 143 valori distinti
+95 colonne hanno 144 valori distinti
+81 colonne hanno 145 valori distinti
+106 colonne hanno 146 valori distinti
+91 colonne hanno 147 valori distinti
+78 colonne hanno 148 valori distinti
+83 colonne hanno 149 valori distinti
+134 colonne hanno 150 valori distinti
+105 colonne hanno 151 valori distinti
+83 colonne hanno 152 valori distinti
+71 colonne hanno 153 valori distinti
+63 colonne hanno 154 valori distinti
+94 colonne hanno 155 valori distinti
+70 colonne hanno 156 valori distinti
+80 colonne hanno 157 valori distinti
+65 colonne hanno 158 valori distinti
+67 colonne hanno 159 valori distinti
+76 colonne hanno 160 valori distinti
+68 colonne hanno 161 valori distinti
+58 colonne hanno 162 valori distinti
+62 colonne hanno 163 valori distinti
+73 colonne hanno 164 valori distinti
+64 colonne hanno 165 valori distinti
+63 colonne hanno 166 valori distinti
+50 colonne hanno 167 valori distinti
+65 colonne hanno 168 valori distinti
+51 colonne hanno 169 valori distinti
+43 colonne hanno 170 valori distinti
+50 colonne hanno 171 valori distinti
+54 colonne hanno 172 valori distinti
+49 colonne hanno 173 valori distinti
+52 colonne hanno 174 valori distinti
+55 colonne hanno 175 valori distinti
+49 colonne hanno 176 valori distinti
+44 colonne hanno 177 valori distinti
+51 colonne hanno 178 valori distinti
+1 colonne hanno 2226 valori distinti
+45 colonne hanno 179 valori distinti
+58 colonne hanno 180 valori distinti
+43 colonne hanno 181 valori distinti
+1 colonne hanno 2229 valori distinti
+47 colonne hanno 182 valori distinti
+52 colonne hanno 183 valori distinti
+47 colonne hanno 184 valori distinti
+47 colonne hanno 185 valori distinti
+32 colonne hanno 186 valori distinti
+53 colonne hanno 187 valori distinti
+51 colonne hanno 188 valori distinti
+49 colonne hanno 189 valori distinti
+41 colonne hanno 190 valori distinti
+47 colonne hanno 191 valori distinti
+35 colonne hanno 192 valori distinti
+92 colonne hanno 193 valori distinti
+46 colonne hanno 194 valori distinti
+59 colonne hanno 195 valori distinti
+39 colonne hanno 196 valori distinti
+38 colonne hanno 197 valori distinti
+43 colonne hanno 198 valori distinti
+47 colonne hanno 199 valori distinti
+55 colonne hanno 200 valori distinti
+38 colonne hanno 201 valori distinti
+39 colonne hanno 202 valori distinti
+41 colonne hanno 203 valori distinti
+35 colonne hanno 204 valori distinti
+42 colonne hanno 205 valori distinti
+31 colonne hanno 206 valori distinti
+45 colonne hanno 207 valori distinti
+30 colonne hanno 208 valori distinti
+36 colonne hanno 209 valori distinti
+47 colonne hanno 210 valori distinti
+38 colonne hanno 211 valori distinti
+42 colonne hanno 212 valori distinti
+31 colonne hanno 213 valori distinti
+38 colonne hanno 214 valori distinti
+25 colonne hanno 215 valori distinti
+32 colonne hanno 216 valori distinti
+37 colonne hanno 217 valori distinti
+16 colonne hanno 218 valori distinti
+36 colonne hanno 219 valori distinti
+24 colonne hanno 220 valori distinti
+28 colonne hanno 221 valori distinti
+24 colonne hanno 222 valori distinti
+33 colonne hanno 223 valori distinti
+29 colonne hanno 224 valori distinti
+33 colonne hanno 225 valori distinti
+41 colonne hanno 226 valori distinti
+18 colonne hanno 227 valori distinti
+18 colonne hanno 228 valori distinti
+30 colonne hanno 229 valori distinti
+1 colonne hanno 2277 valori distinti
+31 colonne hanno 230 valori distinti
+23 colonne hanno 231 valori distinti
+32 colonne hanno 232 valori distinti
+26 colonne hanno 233 valori distinti
+33 colonne hanno 234 valori distinti
+38 colonne hanno 235 valori distinti
+30 colonne hanno 236 valori distinti
+22 colonne hanno 237 valori distinti
+29 colonne hanno 238 valori distinti
+14 colonne hanno 239 valori distinti
+16 colonne hanno 240 valori distinti
+20 colonne hanno 241 valori distinti
+22 colonne hanno 242 valori distinti
+31 colonne hanno 243 valori distinti
+21 colonne hanno 244 valori distinti
+10 colonne hanno 245 valori distinti
+17 colonne hanno 246 valori distinti
+13 colonne hanno 247 valori distinti
+26 colonne hanno 248 valori distinti
+26 colonne hanno 249 valori distinti
+20 colonne hanno 250 valori distinti
+17 colonne hanno 251 valori distinti
+22 colonne hanno 252 valori distinti
+15 colonne hanno 253 valori distinti
+13 colonne hanno 254 valori distinti
+14 colonne hanno 255 valori distinti
+2 colonne hanno 2303 valori distinti
+53 colonne hanno 256 valori distinti
+10 colonne hanno 257 valori distinti
+21 colonne hanno 258 valori distinti
+30 colonne hanno 259 valori distinti
+26 colonne hanno 260 valori distinti
+36 colonne hanno 261 valori distinti
+18 colonne hanno 262 valori distinti
+18 colonne hanno 263 valori distinti
+20 colonne hanno 264 valori distinti
+14 colonne hanno 265 valori distinti
+16 colonne hanno 266 valori distinti
+14 colonne hanno 267 valori distinti
+12 colonne hanno 268 valori distinti
+19 colonne hanno 269 valori distinti
+15 colonne hanno 270 valori distinti
+11 colonne hanno 271 valori distinti
+7 colonne hanno 272 valori distinti
+10 colonne hanno 273 valori distinti
+17 colonne hanno 274 valori distinti
+14 colonne hanno 275 valori distinti
+4 colonne hanno 276 valori distinti
+11 colonne hanno 277 valori distinti
+8 colonne hanno 278 valori distinti
+12 colonne hanno 279 valori distinti
+9 colonne hanno 280 valori distinti
+9 colonne hanno 281 valori distinti
+10 colonne hanno 282 valori distinti
+16 colonne hanno 283 valori distinti
+12 colonne hanno 284 valori distinti
+9 colonne hanno 285 valori distinti
+11 colonne hanno 286 valori distinti
+16 colonne hanno 287 valori distinti
+17 colonne hanno 288 valori distinti
+12 colonne hanno 289 valori distinti
+13 colonne hanno 290 valori distinti
+6 colonne hanno 291 valori distinti
+17 colonne hanno 292 valori distinti
+9 colonne hanno 293 valori distinti
+9 colonne hanno 294 valori distinti
+11 colonne hanno 295 valori distinti
+19 colonne hanno 296 valori distinti
+11 colonne hanno 297 valori distinti
+8 colonne hanno 298 valori distinti
+14 colonne hanno 299 valori distinti
+20 colonne hanno 300 valori distinti
+11 colonne hanno 301 valori distinti
+13 colonne hanno 302 valori distinti
+8 colonne hanno 303 valori distinti
+4 colonne hanno 304 valori distinti
+11 colonne hanno 305 valori distinti
+9 colonne hanno 306 valori distinti
+18 colonne hanno 307 valori distinti
+5 colonne hanno 308 valori distinti
+13 colonne hanno 309 valori distinti
+8 colonne hanno 310 valori distinti
+2 colonne hanno 311 valori distinti
+13 colonne hanno 312 valori distinti
+10 colonne hanno 313 valori distinti
+6 colonne hanno 314 valori distinti
+13 colonne hanno 315 valori distinti
+7 colonne hanno 316 valori distinti
+8 colonne hanno 317 valori distinti
+4 colonne hanno 318 valori distinti
+7 colonne hanno 319 valori distinti
+5 colonne hanno 320 valori distinti
+7 colonne hanno 321 valori distinti
+12 colonne hanno 322 valori distinti
+11 colonne hanno 323 valori distinti
+4 colonne hanno 324 valori distinti
+7 colonne hanno 325 valori distinti
+9 colonne hanno 326 valori distinti
+7 colonne hanno 327 valori distinti
+3 colonne hanno 328 valori distinti
+7 colonne hanno 329 valori distinti
+10 colonne hanno 330 valori distinti
+3 colonne hanno 331 valori distinti
+9 colonne hanno 332 valori distinti
+7 colonne hanno 333 valori distinti
+4 colonne hanno 334 valori distinti
+4 colonne hanno 335 valori distinti
+7 colonne hanno 336 valori distinti
+6 colonne hanno 337 valori distinti
+3 colonne hanno 338 valori distinti
+5 colonne hanno 339 valori distinti
+9 colonne hanno 340 valori distinti
+8 colonne hanno 341 valori distinti
+7 colonne hanno 342 valori distinti
+8 colonne hanno 343 valori distinti
+2 colonne hanno 344 valori distinti
+11 colonne hanno 345 valori distinti
+13 colonne hanno 346 valori distinti
+8 colonne hanno 347 valori distinti
+6 colonne hanno 348 valori distinti
+13 colonne hanno 349 valori distinti
+4 colonne hanno 350 valori distinti
+10 colonne hanno 351 valori distinti
+7 colonne hanno 352 valori distinti
+14 colonne hanno 353 valori distinti
+9 colonne hanno 354 valori distinti
+7 colonne hanno 355 valori distinti
+12 colonne hanno 356 valori distinti
+6 colonne hanno 357 valori distinti
+1 colonne hanno 358 valori distinti
+6 colonne hanno 359 valori distinti
+7 colonne hanno 360 valori distinti
+7 colonne hanno 361 valori distinti
+23 colonne hanno 362 valori distinti
+11 colonne hanno 363 valori distinti
+7 colonne hanno 364 valori distinti
+7 colonne hanno 365 valori distinti
+7 colonne hanno 366 valori distinti
+3 colonne hanno 367 valori distinti
+3 colonne hanno 368 valori distinti
+2 colonne hanno 369 valori distinti
+6 colonne hanno 370 valori distinti
+5 colonne hanno 371 valori distinti
+3 colonne hanno 372 valori distinti
+6 colonne hanno 373 valori distinti
+5 colonne hanno 374 valori distinti
+6 colonne hanno 375 valori distinti
+6 colonne hanno 376 valori distinti
+5 colonne hanno 377 valori distinti
+1 colonne hanno 378 valori distinti
+7 colonne hanno 379 valori distinti
+2 colonne hanno 380 valori distinti
+5 colonne hanno 381 valori distinti
+2 colonne hanno 382 valori distinti
+8 colonne hanno 383 valori distinti
+5 colonne hanno 384 valori distinti
+6 colonne hanno 385 valori distinti
+3 colonne hanno 386 valori distinti
+4 colonne hanno 387 valori distinti
+5 colonne hanno 388 valori distinti
+8 colonne hanno 389 valori distinti
+5 colonne hanno 390 valori distinti
+5 colonne hanno 391 valori distinti
+3 colonne hanno 392 valori distinti
+4 colonne hanno 393 valori distinti
+7 colonne hanno 394 valori distinti
+4 colonne hanno 395 valori distinti
+3 colonne hanno 396 valori distinti
+5 colonne hanno 397 valori distinti
+6 colonne hanno 398 valori distinti
+3 colonne hanno 399 valori distinti
+8 colonne hanno 400 valori distinti
+10 colonne hanno 401 valori distinti
+5 colonne hanno 402 valori distinti
+4 colonne hanno 403 valori distinti
+5 colonne hanno 404 valori distinti
+5 colonne hanno 405 valori distinti
+4 colonne hanno 406 valori distinti
+4 colonne hanno 407 valori distinti
+2 colonne hanno 408 valori distinti
+4 colonne hanno 409 valori distinti
+6 colonne hanno 410 valori distinti
+10 colonne hanno 411 valori distinti
+14 colonne hanno 412 valori distinti
+22 colonne hanno 413 valori distinti
+4 colonne hanno 414 valori distinti
+4 colonne hanno 415 valori distinti
+5 colonne hanno 416 valori distinti
+3 colonne hanno 417 valori distinti
+3 colonne hanno 418 valori distinti
+11 colonne hanno 419 valori distinti
+4 colonne hanno 420 valori distinti
+6 colonne hanno 421 valori distinti
+5 colonne hanno 422 valori distinti
+4 colonne hanno 423 valori distinti
+5 colonne hanno 424 valori distinti
+5 colonne hanno 425 valori distinti
+4 colonne hanno 426 valori distinti
+8 colonne hanno 427 valori distinti
+5 colonne hanno 428 valori distinti
+8 colonne hanno 429 valori distinti
+3 colonne hanno 430 valori distinti
+10 colonne hanno 431 valori distinti
+10 colonne hanno 432 valori distinti
+13 colonne hanno 433 valori distinti
+16 colonne hanno 434 valori distinti
+26 colonne hanno 435 valori distinti
+13 colonne hanno 436 valori distinti
+1 colonne hanno 437 valori distinti
+8 colonne hanno 439 valori distinti
+7 colonne hanno 440 valori distinti
+7 colonne hanno 441 valori distinti
+6 colonne hanno 442 valori distinti
+10 colonne hanno 443 valori distinti
+12 colonne hanno 444 valori distinti
+6 colonne hanno 445 valori distinti
+4 colonne hanno 446 valori distinti
+6 colonne hanno 447 valori distinti
+6 colonne hanno 448 valori distinti
+5 colonne hanno 449 valori distinti
+6 colonne hanno 450 valori distinti
+5 colonne hanno 451 valori distinti
+2 colonne hanno 452 valori distinti
+9 colonne hanno 453 valori distinti
+3 colonne hanno 454 valori distinti
+5 colonne hanno 455 valori distinti
+3 colonne hanno 456 valori distinti
+1 colonne hanno 457 valori distinti
+3 colonne hanno 458 valori distinti
+7 colonne hanno 459 valori distinti
+2 colonne hanno 460 valori distinti
+1 colonne hanno 2508 valori distinti
+4 colonne hanno 461 valori distinti
+5 colonne hanno 462 valori distinti
+2 colonne hanno 463 valori distinti
+1 colonne hanno 464 valori distinti
+8 colonne hanno 465 valori distinti
+4 colonne hanno 466 valori distinti
+4 colonne hanno 467 valori distinti
+2 colonne hanno 468 valori distinti
+4 colonne hanno 470 valori distinti
+2 colonne hanno 471 valori distinti
+1 colonne hanno 472 valori distinti
+3 colonne hanno 473 valori distinti
+3 colonne hanno 474 valori distinti
+2 colonne hanno 475 valori distinti
+1 colonne hanno 477 valori distinti
+5 colonne hanno 479 valori distinti
+2 colonne hanno 481 valori distinti
+2 colonne hanno 482 valori distinti
+3 colonne hanno 483 valori distinti
+1 colonne hanno 484 valori distinti
+4 colonne hanno 485 valori distinti
+3 colonne hanno 486 valori distinti
+2 colonne hanno 487 valori distinti
+4 colonne hanno 489 valori distinti
+4 colonne hanno 490 valori distinti
+2 colonne hanno 491 valori distinti
+1 colonne hanno 493 valori distinti
+3 colonne hanno 494 valori distinti
+1 colonne hanno 495 valori distinti
+3 colonne hanno 496 valori distinti
+4 colonne hanno 497 valori distinti
+1 colonne hanno 498 valori distinti
+2 colonne hanno 499 valori distinti
+3 colonne hanno 500 valori distinti
+6 colonne hanno 501 valori distinti
+7 colonne hanno 502 valori distinti
+3 colonne hanno 503 valori distinti
+2 colonne hanno 504 valori distinti
+3 colonne hanno 505 valori distinti
+3 colonne hanno 506 valori distinti
+2 colonne hanno 507 valori distinti
+3 colonne hanno 508 valori distinti
+4 colonne hanno 509 valori distinti
+4 colonne hanno 510 valori distinti
+2 colonne hanno 511 valori distinti
+3 colonne hanno 512 valori distinti
+4 colonne hanno 514 valori distinti
+2 colonne hanno 515 valori distinti
+4 colonne hanno 518 valori distinti
+3 colonne hanno 519 valori distinti
+4 colonne hanno 520 valori distinti
+2 colonne hanno 522 valori distinti
+3 colonne hanno 523 valori distinti
+2 colonne hanno 526 valori distinti
+5 colonne hanno 527 valori distinti
+2 colonne hanno 529 valori distinti
+1 colonne hanno 2577 valori distinti
+2 colonne hanno 530 valori distinti
+2 colonne hanno 531 valori distinti
+2 colonne hanno 533 valori distinti
+2 colonne hanno 534 valori distinti
+1 colonne hanno 2582 valori distinti
+3 colonne hanno 535 valori distinti
+4 colonne hanno 536 valori distinti
+1 colonne hanno 537 valori distinti
+1 colonne hanno 538 valori distinti
+4 colonne hanno 539 valori distinti
+4 colonne hanno 541 valori distinti
+1 colonne hanno 542 valori distinti
+2 colonne hanno 543 valori distinti
+2 colonne hanno 544 valori distinti
+3 colonne hanno 545 valori distinti
+1 colonne hanno 547 valori distinti
+1 colonne hanno 548 valori distinti
+1 colonne hanno 549 valori distinti
+2 colonne hanno 550 valori distinti
+1 colonne hanno 552 valori distinti
+3 colonne hanno 553 valori distinti
+1 colonne hanno 554 valori distinti
+3 colonne hanno 556 valori distinti
+1 colonne hanno 557 valori distinti
+2 colonne hanno 558 valori distinti
+1 colonne hanno 559 valori distinti
+4 colonne hanno 560 valori distinti
+2 colonne hanno 562 valori distinti
+1 colonne hanno 563 valori distinti
+2 colonne hanno 564 valori distinti
+2 colonne hanno 565 valori distinti
+3 colonne hanno 568 valori distinti
+3 colonne hanno 570 valori distinti
+3 colonne hanno 571 valori distinti
+1 colonne hanno 573 valori distinti
+4 colonne hanno 574 valori distinti
+2 colonne hanno 576 valori distinti
+4 colonne hanno 577 valori distinti
+2 colonne hanno 580 valori distinti
+2 colonne hanno 581 valori distinti
+2 colonne hanno 582 valori distinti
+1 colonne hanno 583 valori distinti
+1 colonne hanno 584 valori distinti
+2 colonne hanno 587 valori distinti
+3 colonne hanno 588 valori distinti
+3 colonne hanno 589 valori distinti
+1 colonne hanno 590 valori distinti
+3 colonne hanno 591 valori distinti
+1 colonne hanno 592 valori distinti
+1 colonne hanno 593 valori distinti
+1 colonne hanno 595 valori distinti
+4 colonne hanno 596 valori distinti
+1 colonne hanno 597 valori distinti
+1 colonne hanno 600 valori distinti
+2 colonne hanno 602 valori distinti
+1 colonne hanno 603 valori distinti
+2 colonne hanno 605 valori distinti
+1 colonne hanno 606 valori distinti
+1 colonne hanno 607 valori distinti
+1 colonne hanno 609 valori distinti
+2 colonne hanno 610 valori distinti
+3 colonne hanno 611 valori distinti
+1 colonne hanno 612 valori distinti
+1 colonne hanno 614 valori distinti
+2 colonne hanno 619 valori distinti
+1 colonne hanno 621 valori distinti
+2 colonne hanno 622 valori distinti
+2 colonne hanno 624 valori distinti
+1 colonne hanno 625 valori distinti
+3 colonne hanno 626 valori distinti
+1 colonne hanno 627 valori distinti
+2 colonne hanno 628 valori distinti
+1 colonne hanno 629 valori distinti
+4 colonne hanno 630 valori distinti
+3 colonne hanno 631 valori distinti
+1 colonne hanno 633 valori distinti
+1 colonne hanno 634 valori distinti
+2 colonne hanno 636 valori distinti
+1 colonne hanno 643 valori distinti
+1 colonne hanno 645 valori distinti
+1 colonne hanno 646 valori distinti
+1 colonne hanno 647 valori distinti
+2 colonne hanno 648 valori distinti
+1 colonne hanno 649 valori distinti
+2 colonne hanno 650 valori distinti
+2 colonne hanno 651 valori distinti
+1 colonne hanno 652 valori distinti
+3 colonne hanno 654 valori distinti
+1 colonne hanno 655 valori distinti
+2 colonne hanno 657 valori distinti
+1 colonne hanno 659 valori distinti
+2 colonne hanno 667 valori distinti
+1 colonne hanno 668 valori distinti
+1 colonne hanno 669 valori distinti
+1 colonne hanno 671 valori distinti
+2 colonne hanno 672 valori distinti
+1 colonne hanno 674 valori distinti
+1 colonne hanno 675 valori distinti
+1 colonne hanno 678 valori distinti
+3 colonne hanno 683 valori distinti
+2 colonne hanno 685 valori distinti
+2 colonne hanno 686 valori distinti
+3 colonne hanno 687 valori distinti
+1 colonne hanno 689 valori distinti
+1 colonne hanno 692 valori distinti
+1 colonne hanno 693 valori distinti
+2 colonne hanno 699 valori distinti
+1 colonne hanno 701 valori distinti
+2 colonne hanno 705 valori distinti
+1 colonne hanno 706 valori distinti
+3 colonne hanno 708 valori distinti
+1 colonne hanno 710 valori distinti
+2 colonne hanno 713 valori distinti
+1 colonne hanno 714 valori distinti
+1 colonne hanno 715 valori distinti
+2 colonne hanno 717 valori distinti
+1 colonne hanno 719 valori distinti
+2 colonne hanno 720 valori distinti
+1 colonne hanno 725 valori distinti
+1 colonne hanno 726 valori distinti
+1 colonne hanno 729 valori distinti
+1 colonne hanno 731 valori distinti
+1 colonne hanno 732 valori distinti
+1 colonne hanno 735 valori distinti
+1 colonne hanno 737 valori distinti
+1 colonne hanno 741 valori distinti
+2 colonne hanno 744 valori distinti
+1 colonne hanno 747 valori distinti
+2 colonne hanno 754 valori distinti
+1 colonne hanno 757 valori distinti
+1 colonne hanno 758 valori distinti
+1 colonne hanno 765 valori distinti
+2 colonne hanno 769 valori distinti
+1 colonne hanno 770 valori distinti
+1 colonne hanno 777 valori distinti
+1 colonne hanno 778 valori distinti
+1 colonne hanno 780 valori distinti
+1 colonne hanno 781 valori distinti
+1 colonne hanno 782 valori distinti
+1 colonne hanno 786 valori distinti
+2 colonne hanno 787 valori distinti
+1 colonne hanno 788 valori distinti
+1 colonne hanno 791 valori distinti
+1 colonne hanno 792 valori distinti
+1 colonne hanno 796 valori distinti
+2 colonne hanno 797 valori distinti
+1 colonne hanno 798 valori distinti
+2 colonne hanno 800 valori distinti
+1 colonne hanno 805 valori distinti
+1 colonne hanno 807 valori distinti
+1 colonne hanno 2857 valori distinti
+1 colonne hanno 811 valori distinti
+1 colonne hanno 814 valori distinti
+1 colonne hanno 815 valori distinti
+1 colonne hanno 827 valori distinti
+1 colonne hanno 828 valori distinti
+1 colonne hanno 830 valori distinti
+1 colonne hanno 835 valori distinti
+1 colonne hanno 841 valori distinti
+1 colonne hanno 844 valori distinti
+1 colonne hanno 847 valori distinti
+1 colonne hanno 850 valori distinti
+1 colonne hanno 2902 valori distinti
+1 colonne hanno 865 valori distinti
+1 colonne hanno 868 valori distinti
+1 colonne hanno 872 valori distinti
+1 colonne hanno 884 valori distinti
+1 colonne hanno 886 valori distinti
+1 colonne hanno 887 valori distinti
+1 colonne hanno 892 valori distinti
+1 colonne hanno 899 valori distinti
+1 colonne hanno 918 valori distinti
+1 colonne hanno 928 valori distinti
+2 colonne hanno 930 valori distinti
+1 colonne hanno 942 valori distinti
+1 colonne hanno 949 valori distinti
+1 colonne hanno 950 valori distinti
+1 colonne hanno 968 valori distinti
+1 colonne hanno 976 valori distinti
+1 colonne hanno 977 valori distinti
+1 colonne hanno 984 valori distinti
+1 colonne hanno 986 valori distinti
+1 colonne hanno 987 valori distinti
+1 colonne hanno 988 valori distinti
+1 colonne hanno 992 valori distinti
+1 colonne hanno 1004 valori distinti
+1 colonne hanno 1006 valori distinti
+3 colonne hanno 1007 valori distinti
+1 colonne hanno 1013 valori distinti
+1 colonne hanno 1022 valori distinti
+1 colonne hanno 1027 valori distinti
+2 colonne hanno 1033 valori distinti
+1 colonne hanno 3084 valori distinti
+1 colonne hanno 1037 valori distinti
+1 colonne hanno 1042 valori distinti
+1 colonne hanno 1045 valori distinti
+1 colonne hanno 1048 valori distinti
+1 colonne hanno 1051 valori distinti
+1 colonne hanno 1062 valori distinti
+1 colonne hanno 1068 valori distinti
+1 colonne hanno 1084 valori distinti
+1 colonne hanno 1089 valori distinti
+1 colonne hanno 1090 valori distinti
+1 colonne hanno 1093 valori distinti
+1 colonne hanno 3142 valori distinti
+1 colonne hanno 1102 valori distinti
+1 colonne hanno 1104 valori distinti
+1 colonne hanno 1112 valori distinti
+1 colonne hanno 1114 valori distinti
+1 colonne hanno 1120 valori distinti
+1 colonne hanno 1124 valori distinti
+1 colonne hanno 1181 valori distinti
+1 colonne hanno 1195 valori distinti
+1 colonne hanno 3258 valori distinti
+1 colonne hanno 1216 valori distinti
+1 colonne hanno 1227 valori distinti
+1 colonne hanno 1235 valori distinti
+1 colonne hanno 1237 valori distinti
+1 colonne hanno 1248 valori distinti
+1 colonne hanno 1254 valori distinti
+1 colonne hanno 1268 valori distinti
+1 colonne hanno 1276 valori distinti
+1 colonne hanno 1278 valori distinti
+1 colonne hanno 1298 valori distinti
+1 colonne hanno 1308 valori distinti
+1 colonne hanno 1335 valori distinti
+1 colonne hanno 1337 valori distinti
+1 colonne hanno 1344 valori distinti
+1 colonne hanno 1369 valori distinti
+1 colonne hanno 1376 valori distinti
+1 colonne hanno 1377 valori distinti
+1 colonne hanno 1378 valori distinti
+1 colonne hanno 5489 valori distinti
+1 colonne hanno 1419 valori distinti
+1 colonne hanno 1444 valori distinti
+1 colonne hanno 1445 valori distinti
+1 colonne hanno 1483 valori distinti
+1 colonne hanno 1494 valori distinti
+1 colonne hanno 1497 valori distinti
+1 colonne hanno 1501 valori distinti
+1 colonne hanno 1507 valori distinti
+1 colonne hanno 1524 valori distinti
+1 colonne hanno 1542 valori distinti
+1 colonne hanno 1588 valori distinti
+1 colonne hanno 1601 valori distinti
+1 colonne hanno 1623 valori distinti
+1 colonne hanno 1651 valori distinti
+1 colonne hanno 5748 valori distinti
+1 colonne hanno 1690 valori distinti
+1 colonne hanno 1734 valori distinti
+1 colonne hanno 1762 valori distinti
+1 colonne hanno 1767 valori distinti
+1 colonne hanno 1779 valori distinti
+1 colonne hanno 3836 valori distinti
+1 colonne hanno 1798 valori distinti
+1 colonne hanno 1800 valori distinti
+1 colonne hanno 1814 valori distinti
+1 colonne hanno 1821 valori distinti
+1 colonne hanno 1877 valori distinti
+1 colonne hanno 5992 valori distinti
+1 colonne hanno 1977 valori distinti
+1 colonne hanno 2033 valori distinti
+1 colonne hanno 2046 valori distinti
+
+Distribuzione valori distinti per riga:
+116938 righe hanno 1 valori distinti
+579905 righe hanno 2 valori distinti
+4484908 righe hanno 3 valori distinti
+2309505 righe hanno 4 valori distinti
+1265935 righe hanno 5 valori distinti
+285056 righe hanno 6 valori distinti
+124069 righe hanno 7 valori distinti
+59210 righe hanno 8 valori distinti
+35843 righe hanno 9 valori distinti
+25466 righe hanno 10 valori distinti
+21881 righe hanno 11 valori distinti
+17609 righe hanno 12 valori distinti
+15697 righe hanno 13 valori distinti
+10739 righe hanno 14 valori distinti
+9258 righe hanno 15 valori distinti
+8282 righe hanno 16 valori distinti
+3319 righe hanno 17 valori distinti
+1948 righe hanno 18 valori distinti
+1416 righe hanno 19 valori distinti
+748 righe hanno 20 valori distinti
+894 righe hanno 21 valori distinti
+423 righe hanno 22 valori distinti
+569 righe hanno 23 valori distinti
+186 righe hanno 24 valori distinti
+299 righe hanno 25 valori distinti
+124 righe hanno 26 valori distinti
+74 righe hanno 27 valori distinti
+65 righe hanno 28 valori distinti
+42 righe hanno 29 valori distinti
+39 righe hanno 30 valori distinti
+32 righe hanno 31 valori distinti
+42 righe hanno 32 valori distinti
+16 righe hanno 33 valori distinti
+34 righe hanno 34 valori distinti
+286 righe hanno 35 valori distinti
+6 righe hanno 36 valori distinti
+19 righe hanno 37 valori distinti
+21 righe hanno 38 valori distinti
+3 righe hanno 39 valori distinti
+104 righe hanno 40 valori distinti
+12 righe hanno 41 valori distinti
+12 righe hanno 42 valori distinti
+2 righe hanno 43 valori distinti
+21 righe hanno 44 valori distinti
+17 righe hanno 45 valori distinti
+4 righe hanno 46 valori distinti
+25 righe hanno 47 valori distinti
+16 righe hanno 50 valori distinti
+38 righe hanno 51 valori distinti
+62 righe hanno 52 valori distinti
+1 righe hanno 53 valori distinti
+21 righe hanno 54 valori distinti
+8 righe hanno 55 valori distinti
+26 righe hanno 81 valori distinti

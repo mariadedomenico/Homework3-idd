@@ -37,7 +37,7 @@ public class InvertedIndexCreator {
 			if(cells.get(i).get("cleanedText").isNull() || cells.get(i).get("isHeader").booleanValue()) {
 				continue;
 			}
-			
+
 			cellContent = cells.get(i).get("cleanedText").asText();
 			if(cells2column.containsKey(column)) {
 				cells2column.get(column).add(cellContent);
@@ -59,8 +59,8 @@ public class InvertedIndexCreator {
 		Map<String, Analyzer> perFieldAnalyzers = new HashMap<>();
 
 		perFieldAnalyzers.put("id", new StandardAnalyzer());
-		perFieldAnalyzers.put("cells", new StandardAnalyzer());
 		perFieldAnalyzers.put("column", new StandardAnalyzer());
+		perFieldAnalyzers.put("cells", new StandardAnalyzer());
 
 		Analyzer analyzer = new PerFieldAnalyzerWrapper(defaultAnalyzer, perFieldAnalyzers);
 		IndexWriterConfig config = new IndexWriterConfig(analyzer);
@@ -84,39 +84,38 @@ public class InvertedIndexCreator {
 	}
 
 	public void readTables(String tablePath, Path indexPath, IndexWriter writer) throws Exception {
-		
+
 		Map<Integer, List<String>> cells2column = new HashMap<>();
 		BufferedReader br = null;
-		
+		Integer tableId = 0;
+
 		try {
 			String currentLine;
 
 			br = new BufferedReader(new FileReader(tablePath));
 
 			while ((currentLine = br.readLine()) != null) {
-				System.out.println("Record:\t" + currentLine);
+				//System.out.println("Record:\t" + currentLine);
 
 				ObjectMapper objectMapper = new ObjectMapper();
 
 				try {
 					JsonNode rootNode = objectMapper.readTree(currentLine);
-					
-//					if(rootNode.get("cells").get("isHeader").asBoolean()) {
-//						continue;
-//					}
+
 					// Estrai l'oggetto "cells"
 					JsonNode cellsNode = rootNode.get("cells");
-					String tableId = rootNode.get("_id").asText();
+					tableId++;
 					//dobbiamo creare una mappa con id della tabella, contenuto della cella e coordinate della cella
 					this.updateCells2column(cellsNode, cells2column);
-					this.addDocumentToIndex(cells2column, tableId, writer);
-					
+					this.addDocumentToIndex(cells2column, tableId.toString(), writer);
+
 					cells2column.clear();
 
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
+			System.out.println("\nFINE LETTURA FILE\n");
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -131,15 +130,15 @@ public class InvertedIndexCreator {
 
 	public void addDocumentToIndex(Map<Integer, List<String>> cells2column, String tableId, IndexWriter writer) throws IOException {
 		// iteriamo sulle colonne
+
 		for(Integer column : cells2column.keySet()) {
 			// iteriamo sulle celle
-			for(String c : cells2column.get(column)) {
-				Document document = new Document();
-				document.add(new TextField("id", tableId, Field.Store.YES));
-				document.add(new TextField("cells", c, Field.Store.YES));
-				document.add(new TextField("column", column.toString(), Field.Store.YES));
-				writer.addDocument(document);
-			}
+			String col = cells2column.get(column).toString();
+			Document document = new Document();
+			document.add(new TextField("id", tableId, Field.Store.YES));
+			document.add(new TextField("cells", col.substring(1, col.length()-1), Field.Store.YES));
+			document.add(new TextField("column", column.toString(), Field.Store.YES));
+			writer.addDocument(document);
 		}
 	}
 

@@ -16,29 +16,14 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.LeafReader;
-import org.apache.lucene.index.PostingsEnum;
-import org.apache.lucene.index.Terms;
-import org.apache.lucene.index.TermsEnum;
-import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.BytesRef;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import table.Cella;
 
 public class Statistica {
+
+	private final static String statsPath = System.getProperty("user.dir") + "/src/main/resources/stats/stats.txt"; 
 
 	private Double nTables = 0.0;
 	private Double nRows = 0.0;
@@ -203,7 +188,7 @@ public class Statistica {
 		}
 	}
 
-	public void createStats(String tablePath, Path indexPath) throws ParseException {
+	public void createStats(String tablePath, Path indexPath) throws Exception {
 		BufferedReader br = null;
 		Double nTab = 0.0;
 
@@ -228,7 +213,34 @@ public class Statistica {
 			this.setNRows(this.getNRows()/this.getNTables());
 			this.setNColumns(this.getNColumns()/this.getNTables());
 			this.setNumNullValues(this.getNumNullValues()/this.getNTables());
-			this.generateMetrics(indexPath);
+
+			File file = new File(statsPath); 
+			FileWriter fw = new FileWriter(file);
+			if(!file.exists()) {		
+				file.createNewFile();
+			}
+			
+			fw.write("\nNumero tabelle: " + this.getNTables().intValue());
+			fw.write("\n\nNumero medio righe: " + this.getNRows());
+			fw.write("\n\nNumero medio colonne: " + this.getNColumns());
+			fw.write("\n\nNumero medio valori nulli per tabella: " + this.getNumNullValues());
+			fw.write("\n\nDistribuzione numero di righe:\n");
+			for(Integer i : this.getRow2count().keySet()) {
+				fw.write(this.getRow2count().get(i) + " tabelle hanno " + i + " righe\n");
+			}
+			fw.write("\nDistribuzione numero di colonne:\n");
+			for(Integer i : this.getCol2count().keySet()) {
+				fw.write(this.getCol2count().get(i) + " tabelle hanno " + i + " colonne\n");
+			}
+			fw.write("\nDistribuzione valori distinti per colonna:\n");
+			for(Integer i : this.getDistinct2col().keySet()) {
+				fw.write(this.getDistinct2col().get(i) + " colonne hanno " + i + " valori distinti\n");
+			}
+			fw.write("\nDistribuzione valori distinti per riga:\n");
+			for(Integer i : this.getDistinct2row().keySet()) {
+				fw.write(this.getDistinct2row().get(i) + " righe hanno " + i + " valori distinti\n");
+			}
+			fw.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -289,76 +301,6 @@ public class Statistica {
 		this.setDistinct2row(rowDistinctValues);
 	}
 
-	public File createQrelFile(IndexReader indexReader) {
-
-		File file = new File(System.getProperty("user.dir") + "/src/main/resources/qrel/qrel.txt"); 
-
-		try {
-			FileWriter fw = new FileWriter(file);
-			if(!file.exists()) {		
-				file.createNewFile();
-			}
-
-			// Ottieni un LeafReader per accedere ai termini
-			LeafReader leafReader = indexReader.leaves().get(0).reader();
-
-			// Ottieni i termini per il campo specificato
-			Terms terms = leafReader.terms("cells");
-
-			BytesRef term = null;
-			// Itera sui termini
-			if (terms != null) {
-				TermsEnum termsEnum = terms.iterator();
-				termsEnum = terms.iterator();
-				while ((term = termsEnum.next()) != null) {
-					String termValue = term.utf8ToString();
-					if (input.contains(termValue)) {
-						PostingsEnum postingsEnum = termsEnum.postings(null, PostingsEnum.POSITIONS);
-						int docID;
-						while((docID = postingsEnum.nextDoc()) != PostingsEnum.NO_MORE_DOCS) {
-							fw.write(this.getInput().indexOf(term.utf8ToString()) + " " + docID + " " + "1\n");
-
-						}
-					}
-				}
-			}
-			fw.close();
-		}
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		return file;
-	}
-
-	public void generateMetrics(Path indexPath) throws IOException, ParseException {
-
-		Directory directory = FSDirectory.open(indexPath);
-		IndexReader indexReader = DirectoryReader.open(directory);
-		IndexSearcher searcher = new IndexSearcher(indexReader);
-		QueryParser queryParser = new QueryParser("cells", new WhitespaceAnalyzer());
-
-		File qrel = this.createQrelFile(indexReader);
-
-		Double relDoc = 0.0;
-		Double retrievedDoc = 0.0;
-
-		for(String s : this.input) {
-			Query query = queryParser.parse(s);
-			TopDocs hits = searcher.search(query, 2);
-			retrievedDoc += hits.scoreDocs.length;
-			for (int i = 0; i < hits.scoreDocs.length; i++) {
-				ScoreDoc scoreDoc = hits.scoreDocs[i];
-				if(scoreDoc.doc > 0.5) {
-					relDoc++;
-				}
-			}
-		}
-		this.setPrecision(relDoc/retrievedDoc);
-
-		directory.close();
-		indexReader.close();
-
-	}
 
 
 }
