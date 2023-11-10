@@ -23,7 +23,7 @@ public class MainClass {
 	
 	private final static Path indexPath = Paths.get("/Users/elisacatena/Desktop/index"); 
 	//private final static String tablePath = System.getProperty("user.dir") + "/src/main/resources/tables/myTables.json";
-	private final static String tablePath = "/Users/elisacatena/Desktop/tables.json";
+	private final static String tablePath = "/Users/elisacatena/Desktop/myTables.json";
 
 
 	public static void main(String args[]) throws Exception {
@@ -32,9 +32,9 @@ public class MainClass {
 		
 		try {
 			
-//			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
-//			
-//			indexCreator.createIndex(tablePath, indexPath);
+			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
+			
+			indexCreator.createIndex(tablePath, indexPath);
 			
 			Directory directory = FSDirectory.open(indexPath);
 			IndexReader indexReader = DirectoryReader.open(directory);
@@ -49,7 +49,7 @@ public class MainClass {
 			//elimina le query duplicate dall'input
 			Set<String> setWithoutDuplicates = new HashSet<>(Arrays.asList(input));
 			List<String> inputWithoutDuplicates = new ArrayList<>(setWithoutDuplicates);
-			
+			int dimInput = inputWithoutDuplicates.size();
 			for(int i = 0; i < inputWithoutDuplicates.size(); i++) {
 				System.out.println("input["+i+"]: "+inputWithoutDuplicates.get(i));
 				postingListReader.readPostingList(indexReader, searcher, inputWithoutDuplicates.get(i).toLowerCase(), set2count);
@@ -65,7 +65,17 @@ public class MainClass {
 			}
 			
 			stat.findTopK(set2count);
-			System.out.println("Precision: " + postingListReader.getPrecision()/inputWithoutDuplicates.size());
+			Double occ = 0.0;
+	        Double occTot = 0.0;
+	        for(Cella c: set2count.keySet()) {
+	        	occTot += set2count.get(c);
+	        	if(set2count.get(c) == dimInput) occ++;
+	        }
+	        System.out.println("occTot" + occTot);
+	        System.out.println("occ: " + occ);
+			System.out.println("M1: " + postingListReader.getM1()/inputWithoutDuplicates.size());
+			
+			System.out.println("M2: " + occ/occTot);
 			System.out.println("FINE RICERCA");
 		}
 		catch(Exception e) {

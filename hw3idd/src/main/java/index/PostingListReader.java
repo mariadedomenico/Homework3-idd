@@ -17,14 +17,23 @@ import table.Cella;
 
 public class PostingListReader {
 	
-	private Double precision = 0.0;
+	private Double m1 = 0.0;
+	private Double m2 = 0.0;
 
-	public Double getPrecision() {
-		return precision;
+	public Double getM1() {
+		return m1;
 	}
 
-	public void setPrecision(Double precision) {
-		this.precision = precision;
+	public void setM1(Double m1) {
+		this.m1 = m1;
+	}
+	
+	public Double getM2() {
+		return m2;
+	}
+
+	public void setM2(Double m2) {
+		this.m2 = m2;
 	}
 
 	@SuppressWarnings("deprecation")
@@ -32,7 +41,7 @@ public class PostingListReader {
     	QueryParser queryParser = new QueryParser("cells", new StandardAnalyzer());
     	Query query = queryParser.parse(termToCheck);
         TopDocs hits = searcher.search(query, indexReader.numDocs());
-        System.out.println("Sono stati trovati " + hits.scoreDocs.length + " " + "documenti");
+        System.out.println("Sono state trovate " + hits.scoreDocs.length + " " + "colonne");
         Integer cont = hits.scoreDocs.length;
         Double relevantDocCount = 0.0;
         for (int i = 0; i < cont; i++) {
@@ -50,7 +59,8 @@ public class PostingListReader {
             	relevantDocCount++;
         	}
         }
-        this.setPrecision(this.getPrecision()+(relevantDocCount/cont.doubleValue()));
+        
+        this.setM1(this.getM1()+(relevantDocCount/cont.doubleValue()));
         System.out.print("\n");
     }
     
