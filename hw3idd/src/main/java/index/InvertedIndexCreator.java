@@ -68,6 +68,9 @@ public class InvertedIndexCreator {
 			config.setCodec(codec);
 		}
 
+		 // Registra il momento iniziale
+        long startTime = System.currentTimeMillis();
+        
 		try {
 			directory = FSDirectory.open(indexPath);
 			IndexWriter writer = new IndexWriter(directory, config);
@@ -76,6 +79,13 @@ public class InvertedIndexCreator {
 			this.readTables(tablePath, indexPath, writer);
 			writer.commit();
 			writer.close();
+			
+			// Registra il momento finale
+            long endTime = System.currentTimeMillis();
+
+            // Calcola il tempo trascorso
+            long indexingTime = endTime - startTime;
+            System.out.println("Tempo di indicizzazione: " + indexingTime + " ms\n");
 		}
 		catch(Exception e) {
 			e.printStackTrace();

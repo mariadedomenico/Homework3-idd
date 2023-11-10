@@ -52,14 +52,21 @@ public class MainClass {
 			
 			for(int i = 0; i < inputWithoutDuplicates.size(); i++) {
 				System.out.println("input["+i+"]: "+inputWithoutDuplicates.get(i));
-				postingListReader.readPostingList(indexReader, searcher, inputWithoutDuplicates.get(i), set2count);
+				postingListReader.readPostingList(indexReader, searcher, inputWithoutDuplicates.get(i).toLowerCase(), set2count);
 			}
 
 			scanner.close();
 			indexReader.close();
 			Statistica stat = new Statistica(inputWithoutDuplicates);
 			stat.createStats(tablePath, indexPath);
+			System.out.println("size di set2count: " + set2count.size());
+			for(Cella c : set2count.keySet()) {
+				System.out.println(c.getColonna() + "->" + set2count.get(c));
+			}
+			
 			stat.findTopK(set2count);
+			System.out.println("Precision: " + postingListReader.getPrecision()/inputWithoutDuplicates.size());
+			System.out.println("FINE RICERCA");
 		}
 		catch(Exception e) {
 			e.printStackTrace();

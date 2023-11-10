@@ -17,23 +17,14 @@ import table.Cella;
 
 public class PostingListReader {
 	
-	private Double retrievedDoc = 0.0;
-	private Double relevantDoc = 0.0;
-	
-    public Double getRetrievedDoc() {
-		return retrievedDoc;
+	private Double precision = 0.0;
+
+	public Double getPrecision() {
+		return precision;
 	}
 
-	public void setRetrievedDoc(Double retrievedDoc) {
-		this.retrievedDoc = retrievedDoc;
-	}
-
-	public Double getRelevantDoc() {
-		return relevantDoc;
-	}
-
-	public void setRelevantDoc(Double relevantDoc) {
-		this.relevantDoc = relevantDoc;
+	public void setPrecision(Double precision) {
+		this.precision = precision;
 	}
 
 	@SuppressWarnings("deprecation")
@@ -43,11 +34,12 @@ public class PostingListReader {
         TopDocs hits = searcher.search(query, indexReader.numDocs());
         System.out.println("Sono stati trovati " + hits.scoreDocs.length + " " + "documenti");
         Integer cont = hits.scoreDocs.length;
-        this.setRetrievedDoc(this.getRetrievedDoc()+cont.doubleValue());
+        Double relevantDocCount = 0.0;
         for (int i = 0; i < cont; i++) {
             ScoreDoc scoreDoc = hits.scoreDocs[i];
 			Document doc = searcher.doc(scoreDoc.doc);
-            if(doc.get("cells").startsWith(termToCheck + ",") || doc.get("cells").contains(", " + termToCheck + ',') || doc.get("cells").endsWith(", " + termToCheck)) {
+			String cells = doc.get("cells").toLowerCase();
+            if(cells.startsWith(termToCheck + ",") || cells.contains(", " + termToCheck + ',') || cells.endsWith(", " + termToCheck)) {
             	Cella cella = new Cella(doc.get("column"), doc.get("id"));
             	if(set2count.containsKey(cella)) {
             		set2count.put(cella, set2count.get(cella)+1);
@@ -55,9 +47,10 @@ public class PostingListReader {
             	else {
             		set2count.put(cella, 1);
             	}
-            	this.setRelevantDoc(this.getRelevantDoc()+1);
+            	relevantDocCount++;
         	}
         }
+        this.setPrecision(this.getPrecision()+(relevantDocCount/cont.doubleValue()));
         System.out.print("\n");
     }
     

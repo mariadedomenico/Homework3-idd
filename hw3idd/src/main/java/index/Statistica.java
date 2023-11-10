@@ -29,8 +29,8 @@ public class Statistica {
 	private Double nRows = 0.0;
 	private Double nColumns = 0.0;
 	private Double numNullValues = 0.0;
-	private Map<Integer, Integer> col2count;
-	private Map<Integer, Integer> row2count;
+	private Map<Long, Integer> col2count;
+	private Map<Long, Integer> row2count;
 	private Map<Integer, Integer> distinct2col;
 	private Map<Integer, Integer> distinct2row;
 	private List<String> input;
@@ -77,31 +77,31 @@ public class Statistica {
 		this.numNullValues = nNullValues;
 	}
 
-	public Map<Integer, Integer> getRow2count() {
+	public Map<Long, Integer> getRow2count() {
 		return row2count;
 	}
 
-	public void setRow2count(int size) {
-		if(this.row2count.containsKey(size)) {
-			Integer value = this.row2count.get(size);
-			this.row2count.put(size, value+1);
+	public void setRow2count(Long size) {
+		if(this.getRow2count().containsKey(size)) {
+			Integer value = this.getRow2count().get(size);
+			this.getRow2count().put(size, value+1);
 		}
 		else {
-			this.row2count.put(size, 1);
+			this.getRow2count().put(size, 1);
 		}
 	}
 
-	public Map<Integer, Integer> getCol2count() {
+	public Map<Long, Integer> getCol2count() {
 		return col2count;
 	}
 
-	public void setCol2count(int size) {
-		if(this.col2count.containsKey(size)) {
-			Integer value = this.col2count.get(size);
-			this.col2count.put(size, value+1);
+	public void setCol2count(Long size) {
+		if(this.getCol2count().containsKey(size)) {
+			Integer value = this.getCol2count().get(size);
+			this.getCol2count().put(size, value+1);
 		}
 		else {
-			this.col2count.put(size, 1);
+			this.getCol2count().put(size, 1);
 		}
 
 	}
@@ -112,12 +112,12 @@ public class Statistica {
 
 	public void setDistinct2col(Map<Double, Set<String>> map) {
 		for(Set<String> set : map.values()) {
-			if(this.distinct2col.containsKey(set.size())) {
-				Integer value = this.distinct2col.get(set.size());
-				this.distinct2col.put(set.size(), value+1);
+			if(this.getDistinct2col().containsKey(set.size())) {
+				Integer value = this.getDistinct2col().get(set.size());
+				this.getDistinct2col().put(set.size(), value+1);
 			}
 			else {
-				this.distinct2col.put(set.size(), 1);
+				this.getDistinct2col().put(set.size(), 1);
 			}
 		}
 	}
@@ -128,12 +128,12 @@ public class Statistica {
 
 	public void setDistinct2row(Map<Double, Set<String>> map) {
 		for(Set<String> set : map.values()) {
-			if(this.distinct2row.containsKey(set.size())) {
-				Integer value = this.distinct2row.get(set.size());
-				this.distinct2row.put(set.size(), value+1);
+			if(this.getDistinct2row().containsKey(set.size())) {
+				Integer value = this.getDistinct2row().get(set.size());
+				this.getDistinct2row().put(set.size(), value+1);
 			}
 			else {
-				this.distinct2row.put(set.size(), 1);
+				this.getDistinct2row().put(set.size(), 1);
 			}
 		}
 	}
@@ -175,12 +175,11 @@ public class Statistica {
 
 	public void findTopK(Map<Cella, Integer> map) {
 		map = this.sortByValue(map);
-		for(Cella k : map.keySet()) {
-			System.out.println("colonna " + k.getColonna() + ", tableID " + k.getTableId() + "-> " + map.get(k));
+		int i = 0;
+		
+		if(map.entrySet().size() > 0) {
+			i = map.entrySet().iterator().next().getValue();
 		}
-		System.out.println("\n");
-
-		int i = map.entrySet().iterator().next().getValue();
 
 		for(Cella k : map.keySet()) {
 			if(map.get(k) == i-3) break;
@@ -219,17 +218,17 @@ public class Statistica {
 			if(!file.exists()) {		
 				file.createNewFile();
 			}
-			
+
 			fw.write("\nNumero tabelle: " + this.getNTables().intValue());
 			fw.write("\n\nNumero medio righe: " + this.getNRows());
 			fw.write("\n\nNumero medio colonne: " + this.getNColumns());
 			fw.write("\n\nNumero medio valori nulli per tabella: " + this.getNumNullValues());
 			fw.write("\n\nDistribuzione numero di righe:\n");
-			for(Integer i : this.getRow2count().keySet()) {
+			for(Long i : this.getRow2count().keySet()) {
 				fw.write(this.getRow2count().get(i) + " tabelle hanno " + i + " righe\n");
 			}
 			fw.write("\nDistribuzione numero di colonne:\n");
-			for(Integer i : this.getCol2count().keySet()) {
+			for(Long i : this.getCol2count().keySet()) {
 				fw.write(this.getCol2count().get(i) + " tabelle hanno " + i + " colonne\n");
 			}
 			fw.write("\nDistribuzione valori distinti per colonna:\n");
@@ -241,6 +240,7 @@ public class Statistica {
 				fw.write(this.getDistinct2row().get(i) + " righe hanno " + i + " valori distinti\n");
 			}
 			fw.close();
+			System.out.println("FINE STATISTICHE");
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -258,7 +258,8 @@ public class Statistica {
 		Set<Double> numCol = new HashSet<>();
 		Map<Double, Set<String>> colDistinctValues = new HashMap<>();
 		Map<Double, Set<String>> rowDistinctValues = new HashMap<>();
-
+		Integer cont = 0;
+		
 		for(int i = 0; i < cellsNode.size(); i++) {
 			Double col = cellsNode.get(i).get("Coordinates").get("column").asDouble();
 			Double row = cellsNode.get(i).get("Coordinates").get("row").asDouble();
@@ -273,30 +274,32 @@ public class Statistica {
 
 			if(!cellsNode.get(i).get("isHeader").booleanValue()) {
 				if(colDistinctValues.containsKey(col)) {
-					colDistinctValues.get(col).add(cleanedText);
+					colDistinctValues.get(col).add(cleanedText.toLowerCase());
 				}
 				else {
 					Set<String> distinctWords = new HashSet<>();
-					distinctWords.add(cleanedText);
+					distinctWords.add(cleanedText.toLowerCase());
 					colDistinctValues.put(col, distinctWords);
 				}
 
 				if(rowDistinctValues.containsKey(row)) {
-					rowDistinctValues.get(row).add(cleanedText);
+					rowDistinctValues.get(row).add(cleanedText.toLowerCase());
 				}
 				else {
 					Set<String> distinctWords = new HashSet<>();
-					distinctWords.add(cleanedText);
+					distinctWords.add(cleanedText.toLowerCase());
 					rowDistinctValues.put(row, distinctWords);
 				}
 			}
 
 		}
 
+		Integer nr = numRows.size();
+		Integer nc = numCol.size();
 		this.setNRows(this.getNRows() + numRows.size());
-		this.setRow2count(numRows.size());
+		this.setRow2count(nr.longValue());
 		this.setNColumns(this.getNColumns() + numCol.size());
-		this.setCol2count(numCol.size());
+		this.setCol2count(nc.longValue());
 		this.setDistinct2col(colDistinctValues);
 		this.setDistinct2row(rowDistinctValues);
 	}
