@@ -71,7 +71,7 @@ public class MainClass {
 	        	occTot += set2count.get(c);
 	        	if(set2count.get(c) == dimInput) occ++;
 	        }
-	        System.out.println("occTot" + occTot);
+	        System.out.println("occTot: " + occTot);
 	        System.out.println("occ: " + occ);
 			System.out.println("M1: " + postingListReader.getM1()/inputWithoutDuplicates.size());
 			

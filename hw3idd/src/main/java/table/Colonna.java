@@ -6,10 +6,9 @@ public class Colonna {
 	private String tableId;
 	private String contenuto;
 	
-	public Colonna(String colonna, String tableId, String contenuto) {
+	public Colonna(String colonna, String tableId) {
 		this.colonna = colonna;
 		this.tableId = tableId;
-		this.contenuto = contenuto;
 	}
 	
 	public String getColonna() {

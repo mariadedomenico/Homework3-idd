@@ -50,14 +50,15 @@ public class PostingListReader {
 			Document doc = searcher.doc(scoreDoc.doc);
 			String cells = doc.get("cells").toLowerCase();
             if(cells.startsWith(termToCheck + ",") || cells.contains(", " + termToCheck + ',') || cells.endsWith(", " + termToCheck)) {
-            	Colonna colonna = new Colonna(doc.get("column"), doc.get("id"), termToCheck);
+            	Colonna colonna = new Colonna(doc.get("column"), doc.get("id"));
             	int value = 0;
             	if(set2count.containsKey(colonna)) {
             		value = set2count.get(colonna)+1;
             		Set<Colonna> app = set2count.keySet();
             		for(Colonna c : app) {
+            			System.out.println("c.equals(colonna)" + c.equals(colonna));
             			if(c.equals(colonna)) {
-            				colonna.setContenuto(c.getContenuto().concat(", " + termToCheck));
+            				colonna.setContenuto(c.getContenuto() + ", " + termToCheck);
             				break;
             			}
             		}
@@ -65,6 +66,7 @@ public class PostingListReader {
             	}
             	else {
             		value = 1;
+            		colonna.setContenuto(termToCheck);
             	}
         		set2count.put(colonna, value);
             	relevantDocCount++;
