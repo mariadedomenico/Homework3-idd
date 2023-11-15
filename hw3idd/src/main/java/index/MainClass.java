@@ -17,13 +17,13 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-import table.Cella;
+import table.Colonna;
 
 public class MainClass {
 	
 	private final static Path indexPath = Paths.get("/Users/elisacatena/Desktop/index"); 
 	//private final static String tablePath = System.getProperty("user.dir") + "/src/main/resources/tables/myTables.json";
-	private final static String tablePath = "/Users/elisacatena/Desktop/myTables.json";
+	private final static String tablePath = "/Users/elisacatena/Desktop/tables.json";
 
 
 	public static void main(String args[]) throws Exception {
@@ -32,15 +32,15 @@ public class MainClass {
 		
 		try {
 			
-			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
-			
-			indexCreator.createIndex(tablePath, indexPath);
+//			InvertedIndexCreator indexCreator = new InvertedIndexCreator();
+//			
+//			indexCreator.createIndex(tablePath, indexPath);
 			
 			Directory directory = FSDirectory.open(indexPath);
 			IndexReader indexReader = DirectoryReader.open(directory);
 			IndexSearcher searcher = new IndexSearcher(indexReader);
 			
-			Map<Cella, Integer> set2count = new HashMap<>();
+			Map<Colonna, Integer> set2count = new HashMap<>();
 			PostingListReader postingListReader = new PostingListReader();
 
 			System.out.print("Inserisci una query: ");
@@ -59,15 +59,15 @@ public class MainClass {
 			indexReader.close();
 			Statistica stat = new Statistica(inputWithoutDuplicates);
 			stat.createStats(tablePath, indexPath);
-			System.out.println("size di set2count: " + set2count.size());
-			for(Cella c : set2count.keySet()) {
-				System.out.println(c.getColonna() + "->" + set2count.get(c));
-			}
+//			System.out.println("size di set2count: " + set2count.size());
+//			for(Colonna c : set2count.keySet()) {
+//				System.out.println(c.getColonna() + ", " + c.getTableId() + "->" + set2count.get(c) + " [" + c.getContenuto() + "]");
+//			}
 			
 			stat.findTopK(set2count);
 			Double occ = 0.0;
 	        Double occTot = 0.0;
-	        for(Cella c: set2count.keySet()) {
+	        for(Colonna c: set2count.keySet()) {
 	        	occTot += set2count.get(c);
 	        	if(set2count.get(c) == dimInput) occ++;
 	        }

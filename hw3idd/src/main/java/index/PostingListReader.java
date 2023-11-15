@@ -2,6 +2,7 @@ package index;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -13,7 +14,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 
-import table.Cella;
+import table.Colonna;
 
 public class PostingListReader {
 	
@@ -37,7 +38,7 @@ public class PostingListReader {
 	}
 
 	@SuppressWarnings("deprecation")
-	public void readPostingList(IndexReader indexReader, IndexSearcher searcher, String termToCheck, Map<Cella, Integer> set2count) throws IOException, ParseException {
+	public void readPostingList(IndexReader indexReader, IndexSearcher searcher, String termToCheck, Map<Colonna, Integer> set2count) throws IOException, ParseException {
     	QueryParser queryParser = new QueryParser("cells", new StandardAnalyzer());
     	Query query = queryParser.parse(termToCheck);
         TopDocs hits = searcher.search(query, indexReader.numDocs());
@@ -49,13 +50,23 @@ public class PostingListReader {
 			Document doc = searcher.doc(scoreDoc.doc);
 			String cells = doc.get("cells").toLowerCase();
             if(cells.startsWith(termToCheck + ",") || cells.contains(", " + termToCheck + ',') || cells.endsWith(", " + termToCheck)) {
-            	Cella cella = new Cella(doc.get("column"), doc.get("id"));
-            	if(set2count.containsKey(cella)) {
-            		set2count.put(cella, set2count.get(cella)+1);
+            	Colonna colonna = new Colonna(doc.get("column"), doc.get("id"), termToCheck);
+            	int value = 0;
+            	if(set2count.containsKey(colonna)) {
+            		value = set2count.get(colonna)+1;
+            		Set<Colonna> app = set2count.keySet();
+            		for(Colonna c : app) {
+            			if(c.equals(colonna)) {
+            				colonna.setContenuto(c.getContenuto().concat(", " + termToCheck));
+            				break;
+            			}
+            		}
+            		set2count.put(colonna, value);
             	}
             	else {
-            		set2count.put(cella, 1);
+            		value = 1;
             	}
+        		set2count.put(colonna, value);
             	relevantDocCount++;
         	}
         }
