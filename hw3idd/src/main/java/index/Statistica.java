@@ -19,7 +19,7 @@ import java.util.Set;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import table.Cella;
+import table.Colonna;
 
 public class Statistica {
 
@@ -173,17 +173,17 @@ public class Statistica {
 		return result;
 	}
 
-	public void findTopK(Map<Cella, Integer> map) {
-		map = this.sortByValue(map);
+	public void findTopK(Map<Colonna, Integer> set2count) {
+		set2count = this.sortByValue(set2count);
 		int i = 0;
 		
-		if(map.entrySet().size() > 0) {
-			i = map.entrySet().iterator().next().getValue();
+		if(set2count.entrySet().size() > 0) {
+			i = set2count.entrySet().iterator().next().getValue();
 		}
 
-		for(Cella k : map.keySet()) {
-			if(map.get(k) == i-3) break;
-			System.out.println("colonna " + k.getColonna() + ", tableID " + k.getTableId() + "-> " + map.get(k));
+		for(Colonna k : set2count.keySet()) {
+			if(set2count.get(k) == i-3) break;			
+			System.out.println("colonna " + k.getColonna() + ", tableID " + k.getTableId() + "-> " + set2count.get(k) + " [" + k.getContenuto() + "]");
 		}
 	}
 
@@ -258,7 +258,6 @@ public class Statistica {
 		Set<Double> numCol = new HashSet<>();
 		Map<Double, Set<String>> colDistinctValues = new HashMap<>();
 		Map<Double, Set<String>> rowDistinctValues = new HashMap<>();
-		Integer cont = 0;
 		
 		for(int i = 0; i < cellsNode.size(); i++) {
 			Double col = cellsNode.get(i).get("Coordinates").get("column").asDouble();

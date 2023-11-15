@@ -1,11 +1,12 @@
 package table;
 
-public class Cella {
+public class Colonna {
 
 	private String colonna;
 	private String tableId;
+	private String contenuto;
 	
-	public Cella(String colonna, String tableId) {
+	public Colonna(String colonna, String tableId) {
 		this.colonna = colonna;
 		this.tableId = tableId;
 	}
@@ -26,6 +27,14 @@ public class Cella {
 		this.tableId = tableId;
 	}
 
+	public String getContenuto() {
+		return contenuto;
+	}
+
+	public void setContenuto(String contenuto) {
+		this.contenuto = contenuto;
+	}
+
 	@Override
 	public int hashCode() {
 		return this.colonna.hashCode() + this.tableId.hashCode() + 31;
@@ -35,7 +44,7 @@ public class Cella {
 	public boolean equals(Object obj) {
 		if (obj == null)
 			return false;
-		Cella other = (Cella) obj;
+		Colonna other = (Colonna) obj;
 		return this.colonna.equals(other.getColonna()) && this.tableId.equals(other.getTableId());
 	}
 	
