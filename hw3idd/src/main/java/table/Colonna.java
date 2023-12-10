@@ -32,7 +32,12 @@ public class Colonna {
 	}
 
 	public void setContenuto(String contenuto) {
-		this.contenuto = contenuto;
+		if(this.getContenuto() == null) {
+			this.contenuto = contenuto;
+		}
+		else {
+			this.contenuto = this.getContenuto() + ", " + contenuto;
+		}
 	}
 
 	@Override
