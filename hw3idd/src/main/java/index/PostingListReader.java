@@ -39,7 +39,8 @@ public class PostingListReader {
 
 	@SuppressWarnings("deprecation")
 	public void readPostingList(IndexReader indexReader, IndexSearcher searcher, String termToCheck, Map<Colonna, Integer> set2count) throws IOException, ParseException {
-    	QueryParser queryParser = new QueryParser("cells", new StandardAnalyzer());
+    	//System.out.println(termToCheck);
+		QueryParser queryParser = new QueryParser("cells", new StandardAnalyzer());
     	Query query = queryParser.parse(termToCheck);
         TopDocs hits = searcher.search(query, indexReader.numDocs());
         System.out.println("Sono state trovate " + hits.scoreDocs.length + " " + "colonne");
@@ -56,12 +57,14 @@ public class PostingListReader {
             		value = set2count.get(colonna)+1;
             		Set<Colonna> app = set2count.keySet();
             		for(Colonna c : app) {
-            			System.out.println("c.equals(colonna)" + c.equals(colonna));
+            			//System.out.println("c.equals(colonna)" + c.equals(colonna));
             			if(c.equals(colonna)) {
-            				colonna.setContenuto(c.getContenuto() + ", " + termToCheck);
+            				colonna.setContenuto(termToCheck+", "+c.getContenuto());
+            				//System.out.println(colonna.getContenuto());
             				break;
             			}
             		}
+            		set2count.remove(colonna);
             		set2count.put(colonna, value);
             	}
             	else {

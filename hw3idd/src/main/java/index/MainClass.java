@@ -58,7 +58,7 @@ public class MainClass {
 			scanner.close();
 			indexReader.close();
 			Statistica stat = new Statistica(inputWithoutDuplicates);
-			stat.createStats(tablePath, indexPath);
+			//stat.createStats(tablePath, indexPath);
 //			System.out.println("size di set2count: " + set2count.size());
 //			for(Colonna c : set2count.keySet()) {
 //				System.out.println(c.getColonna() + ", " + c.getTableId() + "->" + set2count.get(c) + " [" + c.getContenuto() + "]");
